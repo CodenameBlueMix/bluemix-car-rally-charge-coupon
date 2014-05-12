@@ -1,4 +1,4 @@
-bluemix-car-rally
+bluemix-car-rally-charge-coupon
 ================================================================================
 
 Implements the Electric Car Rally demo for BlueMix.

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<!-- Licensed under the Apache License. See footer for details. -->
+
+<html ng-app="app" lang="en">
+
+<!-- ======================================================================= -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta       name="mobile-web-app-capable" content="yes">
+
+        <title>Car Rally Charger Coupon</title>
+
+        <!-- <link rel="stylesheet"     href="http://ace.ng.bluemix.net/lib/cloudOE/resources/cloudOELoader.css?20140327-2144"> -->
+
+        <link rel="shortcut icon" href="images/bluemix-icon.png">
+        <link rel="icon"          href="images/bluemix-icon.png">
+
+        <link rel="stylesheet" href="bower/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="bower/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="cloudOE_demo_sprite.css" />
+
+        <link rel="stylesheet" href="banner.css" />
+        <link rel="stylesheet" href="cloudOE.css" />        
+
+        <script>
+            function selectDashboardItem(id, name) {
+                var arr = Array.prototype.slice.call(document.getElementsByClassName("car-rally-menu-item-selected"));
+                arr.forEach(function(el){el.classList.remove("car-rally-menu-item-selected")});
+                document.getElementById(id).classList.add("car-rally-menu-item-selected");
+                document.getElementById("car-rally-banner").textContent = name;
+            }
+            function toggleEmail() {
+                var src = document.getElementById("emailBody");
+                var dst = document.getElementById("dst");
+                if (dst.classList.contains("car-rally-empty")) {
+                    dst.textContent = new String(src.innerHTML);
+                    dst.classList.remove("car-rally-empty");
+                    dst.style.display='inherit';
+                } else {
+                    dst.style.display='none'
+                    dst.textContent = "";
+                    dst.classList.add("car-rally-empty");
+                }
+            }
+        </script>
+    </head>
+
+    <!-- =================================================================== -->
+
+    <body ng-controller="body">
+    <header style="padding-bottom: 35px;">
+            <div class="ProductBanner">
+                <span data-dojo-attach-event="click:_onHomeClick">
+                    <span>
+                        <!-- <img style="width: 10%;" class="BannerLogoImg cloudOESpriteIcon cloudOESpriteIcon_IBM_Logo_1_5px" src="/images/car_rally_logo.png"> -->
+                        <img src="/images/car_banner_30px.svg" style="margin-left: -10px;margin-top: -5px;"/>
+                    </span>
+                    <span class="ProductName ProductSubtitleLight" style="margin-left: 5px;">
+                        <span style="color: white;">Car Rally Charger Coupon</span>
+                    </span>
+                </span>
+                <span id='car-rally-banner' class="context-title" data-dojo-attach-point="banner_context"></span>
+            </div>
+            <i class="fa fa-bars"></i>
+            <nav>
+                <ul>
+                    <li>
+                        <a id="home" href="#/" class="car-rally-menu-item">HOME</a>
+                    </li>                
+                    <li>
+                        <a id="email" href="#/mail" class="car-rally-menu-item" >EMAIL</a>
+                    </li>
+                    <li>
+                        <a id="map"  href="#/map" class="car-rally-menu-item">MAP</a>
+                    </li>
+                    <li>
+                        <a id="about" href="#/help" class="car-rally-menu-item" >ABOUT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+<!--         <div class="navbar navbar-default nabar-static-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <span class="navbar-brand" href="#/">bluemix electric car rally<span ng-bind="getSubtitle()"></span>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li><a href="#/">home</a>
+                    <li><a href="#/mail">mail</a>
+                    <li><a href="#/help">help</a>
+                </ul>
+            </div>
+        </div> -->
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div ng-view></div>
+                </div>
+            </div>
+
+            <hr>
+            <center>
+            </center>
+        </div>
+
+
+        <script src="bower/jquery/jquery.min.js"></script>
+        <script src="bower/bootstrap/js/bootstrap.min.js"></script>
+        <script src="bower/angular/angular.min.js"></script>
+        <script src="bower/angular-resource/angular-resource.min.js"></script>
+        <script src="bower/angular-route/angular-route.min.js"></script>
+        <script src="node-modules.js"></script>
+        <script src="index.js"></script>
+        <!--
+        <script src="//maps.googleapis.com/maps/api/js?key=%gmapKey%&amp;sensor=false"></script>
+        -->
+
+    </body>
+</html>
+
+<!--
+#===============================================================================
+# Copyright IBM Corp. 2014
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#===============================================================================
+-->

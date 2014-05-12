@@ -1,0 +1,42 @@
+/* Feels like a hack... but offset the image slightly, so it aligns with the vertical 
+	middle of the text. At time of this writing the image was 23px tall, and the text 
+	span was 28px tall (with a font size of 24px). */
+.BannerLogoImg {
+	margin-top: -2px;
+}
+
+.ProductSubtitleLight {
+	font-weight: 200;
+}
+
+.ProductSubtitleBold {
+	font-weight: 700;
+}
+
+.cloudOEBannerAbout {
+	margin-left: 14px;
+}
+
+.cloudOE .cloudOEBannerAbout.dijitDialog {
+	background-color: #fffaf4;
+    z-index: 2000;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 4px 20px 20px 20px;
+    width: 40%;
+}
+
+.cloudOE .cloudOEBannerAbout.dijitDialog .dijitDialogTitleBar {
+    display: none;
+}
+
+.cloudOEBannerAbout h2 {
+	font-size: 0.92em;
+}
+
+.cloudOEBannerAbout p {
+	font-size: 0.6em;
+}

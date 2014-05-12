@@ -1,0 +1,4932 @@
+/* Import related Cloud OE style sheets */
+@import url('cloudOE_sprite.css?@revision@');
+@import url('banner.css?@revision@');
+@import url('ArtifactDetailsDialog.css?@revision@');
+
+/*************************/
+
+/********************************************/
+/*				Color Palette				*/
+/********************************************/
+
+.cloudOEWhite,
+.cloudOETabContainer.cloudOEAppDetailsTabContainer,
+.cloudOE .dijitBorderContainer,
+.oneui .gridxAlternatingRows .gridxRow.gridxRowOdd,
+.oneui .gridxAlternatingRows .gridxRowOdd .gridxRowTable {
+	background-color: #ffffff;
+}
+
+/* Color palette, Column 1 */
+.cloudOEFloralWhite, /* Chose "FloralWhite" because close to the official floral white in the list of browser-recognized colors */
+.oneui .dijitDialog,
+.cloudOEMessageDialogContentAreaContentDiv .dijitTab,
+.cloudOEMessageDialogContentAreaContentDiv .dijitContentPane {
+	background-color: #fffaf4;
+}
+
+.cloudOEFloralWhite2,
+.cloudOEArtifactDetails,
+.cloudOETabContainer > .dijitTabListContainer-top .dijitTab.dijitTabChecked,
+.cloudOETabContainer .dijitTabContainerTop-tabs .dijitTabContent.dijitHover,
+.cloudOETabContainer .dijitTabContainerTop-tabs .dijitTabContent.dijitActive {
+	background-color: #f2efeb;
+}
+
+/* Color palette, Column 2 */
+.cloudOESkyBlue,
+.cloudOEBreadcrumb,
+.cloudOEFilesTree .dijitTreeRowHover,
+.oneui.cloudOE .cloudOEAppDetailsButtonDiv .dijitButton .dijitButtonNode:hover {
+	background-color: #29a9e1;
+}
+
+.cloudOELightBlue,
+.oneui.cloudOE .dijitButton .dijitButtonNode:hover,
+.oneui.cloudOE .dijitButton.selected,
+.oneui.cloudOE .dijitButton.cloudOEButtonLarge .dijitButtonNode:hover,
+.oneui .cloudOEFilesTree .dijitTreeRowSelected {
+	background-color: #6da6bf;
+}
+
+.cloudOELightBlue2,
+.oneui.cloudOE .cloudOEMessageDialog hr.cloudOELightBlue2 {
+	background-color: #b8c8d0;
+}
+
+/* Color palette, Column 3 */
+.cloudOEDarkBlue,
+.cloudOEFilesTree .dijitTree,
+.oneui.cloudOE .dijitButton.cloudOEButtonLarge .dijitButtonNode,
+.oneui.cloudOE .dijitButton .dijitButtonNode,
+.oneui.cloudOE .dijitButtonDisabled .dijitButtonNode:hover,
+.oneui.cloudOE .cloudOEAppDetailsButtonDiv .dijitButton.dijitButtonDisabled .dijitButtonNode:hover{
+	background-color: #175275;
+}
+
+.cloudOEDarkBlue2 {
+	background-color: #144963;
+}
+
+/* Color palette, Column 4 */
+.cloudOEDarkGray1Background,
+.oneui.cloudOE .cloudOEAppDetailsSummaryAreaPropertyDivTable .dijitButton .dijitButtonNode:hover {
+	background-color: #57585a;
+}
+
+.cloudOEDarkGray2Background {
+	background-color: #454748;
+}
+
+/* Color palette, Column 5 */
+.cloudOEMediumGray {
+	background-color: #727272;
+}
+
+.cloudOELightGray{
+	background-color: #d4d4d4;
+}
+
+.oneui .cloudOEManageUsersUsersGridContainer .gridxRow,
+.oneui .cloudOEManageDomainsDomainsGridContainer .gridxRow,
+.oneui .cloudOEManageQuotaQuotaGridContainer .gridxRow,
+.oneui .cloudOEManageUsersUsersGrid.gridxFullPage .gridxHeader .gridxHeaderRow,
+.oneui .cloudOEManageDomainsDomainsGrid.gridxFullPage .gridxHeader .gridxHeaderRow,
+.oneui .cloudOEManageQuotaQuotaGrid.gridxFullPage .gridxHeader .gridxHeaderRow{
+	border-bottom: 1px solid #d4d4d4;
+}
+
+/* DW TODO: This color is not in the color palette */
+.oneui .gridxAlternatingRows .gridxRow,
+.oneui .gridxAlternatingRows .gridxRowTable {
+	background-color: #EFF3F7;
+}
+
+.oneui.cloudOE .gridxRowHeaderBody .gridxRowOver {
+	background: none;
+	background-color: transparent;
+}
+
+/* Font color palette */
+
+.cloudOEWhite_foreground,
+.cloudOEAppDetailsHeader,
+.cloudOEAppDetailsHeader a:link,
+.cloudOEAppDetailsHeader a:visited,
+.cloudOETimeSinceLabel,
+.oneui .cloudOEFilesTree .dijitTreeRow,
+.magnetTreeNodeSelected.magnetTreeNodeRow:hover,
+.oneui .dijitButton .dijitButtonNode {
+	color: #ffffff;
+}
+
+.cloudOEOffWhite_foreground,
+.cloudOEBreadcrumb,
+.oneui .cloudOEBreadcrumb a {
+	color: #FFF; 
+}
+
+.cloudOEDarkBlue_foreground,
+.cloudOEMainSectionHeader,
+.cloudOESecondarySectionHeader,
+.cloudOEBreadcrumbSeparator,
+.cloudOEManage .dijitTextBox .dijitInputField,
+.oneui .gridxHeaderRow .gridxCell,
+.cloudOETabContainer > .dijitTabListContainer-top .dijitTab,
+.gridxBodyEmpty,
+.oneui .dijitDialogTitle,
+.oneui .cloudOEManageUsersUsersGridContainer .gridxRow td[colid='username'].gridxCell,
+.oneui .cloudOEManageDomainsDomainsGridContainer .gridxRow td[colid='domain'].gridxCell {
+	color: #175275;
+}
+
+.cloudOEDarkGray1_foreground {
+	color: #57585a;
+}
+
+.cloudOEDarkGray2_foreground{
+	color: #454748;
+}
+
+.cloudOEDarkGray3_foreground,
+.cloudOEArtifactDetailsInfoSection .cloudOEArtifactDetailsTitleSection {
+	color: #464749; /* TODO: Not part of color palette */
+}
+
+.cloudOEDarkGray4_foreground {
+	color: #363636; /* TODO: Not part of color palette */
+}
+
+.cloudOEMediumGray_foreground,
+.oneui .gridxRow .gridxCell,
+.oneui .cloudOEManageUsersUsersGrid .gridxHeaderRow .gridxCell,
+.oneui .cloudOEManageDomainsDomainsGrid .gridxHeaderRow .gridxCell,
+.oneui .cloudOEManageQuotaQuotaGrid .gridxHeaderRow .gridxCell {
+	color: #727272;
+}
+
+.cloudOESkyBlue_foreground {
+	color: #29a9e1;
+}
+
+/*********************************************/
+
+/* Global settings */
+
+/* index.html */
+.cloudOE .cloudOEBorderContainer {
+	width:100%;
+	height:100%;
+	min-height: 1024px;
+	overflow:visible;
+}
+
+.cloudOE .cloudOECenterBorderContainer {
+	overflow:visible;
+	height:100%;
+}
+
+.oneui .dijitStackContainer .dijitContentPane {
+	padding: 0;
+	border: none;
+}
+
+.cloudOE .cloudOEMainStackContainer {
+	 border: none;
+	 overflow: visible;
+}
+
+/* Buttons */
+
+.oneui .dijitButton .dijitButtonNode {
+	font-style: normal;
+	background: transparent;
+
+	border: none;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.oneui.cloudOE .dijitButton .dijitButtonNode {
+	font-weight: 700;
+	border-radius: 5px;
+	height: 35px;
+	padding: 0 15px;
+	font-size: 14px;
+}
+
+.oneui.cloudOE .cloudOEFilesInstanceSelectPane .dijitButton .dijitButtonNode {
+	padding: 0px;
+	height: 20px;
+}
+
+.dj_ie .oneui.cloudOE .dijitButton .dijitButtonNode {
+	/* Need to not set min-height for IE as it makes the buttons really big */
+	min-height: 0;
+}
+
+.oneui.cloudOE .dijitButton.cloudOEButtonLarge {
+	letter-spacing: 0.05em;
+}
+
+.oneui.cloudOE .dijitButton.cloudOEButtonLarge .dijitButtonNode{
+	padding: 0 15px;
+	height: 50px;
+}
+
+.oneui .dijitButton .dijitButtonNode,
+.cloudOETabContainer.dijitTabContainer .dijitTabListContainer-top *,
+.cloudOEMobileSdkButtonText {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	text-shadow: none;
+	box-shadow: none;
+	outline: none;
+}
+
+.oneui .dijitButton .dijitButtonNode:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.oneui.cloudOE .dijitButtonDisabled .dijitButtonNode {
+	opacity: 0.25;
+}
+
+.oneui.cloudOE .dijitButtonDisabled .dijitButtonNode:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+/* Login */
+
+.cloudOELoginNeedToRegister {
+	font-style:italic;
+	padding-top: 10px;
+}
+
+.oneui.cloudOE .cloudOELoginDialog .dijitDialogPaneContent .cloudOELayoutTable {
+	border-spacing: 5px;
+}
+
+.oneui.cloudOE .cloudOELoginDialog .dijitDialogPaneActionBar {
+	padding-top: 0;
+}
+
+/* Navigator */
+.cloudOE .cloudOENavigatorTopContentPane {
+	border: none;
+	padding: 0 !important;
+	margin-bottom: 0;
+}
+
+.cloudOENavigator, .cloudOENavigatorWrapperPane {
+	overflow:visible;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+	margin-top: 100px;
+}
+
+.cloudOENavigatorWrapperPane {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.cloudOEAppDetailsUsageAppInstancesGridContainer, 
+.cloudOEServiceOfferingMetadataEditorGridContainer, 
+.cloudOEEnvVarsGridContainer {
+	width: 100% !important;
+	padding: 0 !important;
+	overflow: visible !important;
+	min-height: 65px;
+}
+
+.cloudOEAppDetailsBoundServicesGridContainer,
+.cloudOEEnvVarsGridContainers {
+	margin-bottom: 25px;
+}
+
+.cloudOEAppDetailsUsageInstancesGrid, 
+.cloudOEServiceOfferingMetadataEditorGrid, 
+.cloudOEEnvVarsGrid {
+	width: 100%;
+	height: 100%;
+	overflow: visible !important;
+}
+
+/* App Details, ServiceInstanceDetails */
+.cloudOEAppDetails.no-runtime .detailsRuntimeSection{
+	display: none;
+}
+
+.cloudOEAppDetailsMessageArea {
+	padding: 20px;
+	background-color: white;
+}
+
+.cloudOEAppDetailsHeader {
+	background-color: #6ea6bf;
+	background: #6ea6bf;
+	background-image:url('img/dashboard_cloud_header_no_top_border.png');
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	border: 0;
+	width: 100%;
+	padding: 15px 0 20px;
+}
+
+.cloudOEServiceInstanceDetailsDashBoard {
+	background-color: white;
+	min-width: 960px;
+	height: 1024px;
+}
+
+.cloudOEServiceInstanceDetailsDashBoard.tile {
+	margin-top: 35px;
+}
+
+.cloudOEServiceInstanceDetailsDashBoardIframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* service instance name */
+.cloudOEServiceInstanceDetailsSummary .serviceNameContainer > .dijitValidationTextBox {
+	display: none;
+}
+.cloudOEServiceInstanceDetailsSummary .serviceNameContainer:after {
+	/* When validationTextBox shows as error, if gets `float:left` by IDX CSS, which
+	   throws off rest of layout. Fix that by clearing the float here*/
+	clear: both;
+	content: "";
+	display: table;
+}
+
+/* service instance name: edit mode */
+.cloudOEServiceInstanceDetailsSummary.editingName .serviceNameContainer h1 {
+	display: none;
+}
+.cloudOEServiceInstanceDetailsSummary.editingName .serviceNameContainer .dijitValidationTextBox {
+	display: block;
+}
+
+/* service instance description */
+.cloudOEServiceInstanceDetailsSummary .descriptionContainer {
+	margin-top: 1em;
+}
+.cloudOEServiceInstanceDetailsSummary .descriptionContainer textarea {
+	display: none;
+}
+
+/* service instance description: edit mode */
+.cloudOEServiceInstanceDetailsSummary.editingDescription .descriptionContainer p {
+	display: none;
+}
+.cloudOEServiceInstanceDetailsSummary.editingDescription .descriptionContainer textarea {
+	display: block;
+}
+
+.cloudOEServiceInstanceDetailsSummary .cloudOETileListItemMainDiv {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+.cloudOEServiceInstanceDetailsSummary .serviceApps {
+	font-size: 12px;
+	font-weight: bold;
+	display: table;
+	margin-top: 1.5em;
+}
+.cloudOEServiceInstanceDetailsSummary .serviceApps .bindings ul {
+	margin-top: 0;
+}
+.cloudOEServiceInstanceDetailsSummary .serviceApps .cloudOETileListArea {
+	margin-left: 8px;
+}
+.cloudOEServiceInstanceDetailsSummary .serviceApps > span {
+	vertical-align: middle;
+	display: table-cell;
+}
+
+/* bug 93270 - use a table layout in order to ensure min-width:960px for service iframe */
+.cloudOEServiceInstanceDetailsTable {
+	display: table;
+	width: 100%;
+}
+.cloudOEServiceInstanceDetails {
+	display: table-row;
+}
+.cloudOEServiceInstanceDetails nav.contextual-nav {
+	display: table-cell;
+	/* override some values from bluemix.css: */
+	vertical-align: top;
+	padding-bottom: 0;
+	float: none;
+	height: auto;
+}
+.cloudOEServiceInstanceDetails .l-remaining-width {
+	display: table-cell;
+	/* bug 93461 - Override this property from bluemix.css so that menu isn't clipped.
+	   A better solution would be to use `display:table/table-row` on parents of
+	   nav.contextual-nav and .l-remaining-width; set both of those to `display:
+	   table-cell` and remove the `float` from nav.contextual-nav */
+	overflow: visible;
+}
+
+.cloudOEServiceInstanceDetails .notDeveloper .developerOnly {
+	display: none;
+}
+
+.cloudOEAppDetailsTopDiv .cloudOEDescriptionLabel {
+	margin-left: 0;
+	font-size: 14px;
+	font-weight: 200;
+}
+
+.cloudOEAppDetailsTopDiv .cloudOEAppDetailsToolbarDivDomainTable {
+	margin-left: 0;
+}
+
+/* domainSelection disappeared due to white font color. */
+.cloudOEAppDetailsToolbarDivDomainTable .dijitSelectLabel.dijitValidationTextBoxLabel  {
+	color:#175275 !important; /* cloudOEDarkBlue_foreground */
+}
+
+.cloudOEAppDetailsLeftDiv {
+	float:left;
+	margin: 0 5px 0 100px;
+}
+
+.cloudOEAppDetailsLeftDiv .cloudOETimeSinceLabelRightSeparator {
+	border-color: #bfd6e1; /* TODO: Not in color palette */
+}
+
+.cloudOEAppDetailsTopContentDiv {
+	margin-left: 330px;
+	margin-right: 110px;
+	border-radius: 2px;
+	padding-bottom: 0; 
+	border-width: 0;
+}
+
+.cloudOEAppDetailsStateLabel {
+	font-weight: 700;
+	margin-right: 3px;
+}
+
+.cloudOEAppDetailsBigAppIconLayout {
+	vertical-align: middle;
+	border-spacing: 0;
+	min-width: 88px;
+}
+
+.cloudOEAppDetailsBigAppIcon {
+	width: 75px;
+	height: 75px;
+	vertical-align:middle;
+}
+
+.cloudOEAppDetailsHealthCell {
+	vertical-align: middle;
+	padding-top: 8px;
+	font-size: 12px;
+}
+
+.cloudOEAppDetailsHealthCell div {
+	padding: 2px 0;
+	text-align: center;
+}
+
+.cloudOEAppDetailsHealthCell .cloudOEAppDetailsHealthCellImgDiv {
+	padding: 0 0;
+	margin-bottom: 15px;
+}
+
+/*.cloudOEAppDetails .cloudOERefresher,
+.cloudOEServiceInstanceDetails .cloudOERefresher {
+	padding-top: 0;
+}
+
+.cloudOEAppDetails .cloudOETimeSinceLabel,
+.cloudOEServiceInstanceDetails .cloudOETimeSinceLabel {
+	padding-top: 4px;
+}*/
+
+.cloudOEAppDetailsTemplateToolTip {
+	width: 460px;
+}
+
+.cloudOEAppDetailsTemplateToolTipActions {
+	padding: 15px 0 0 0;
+}
+
+.cloudOEAppDetailsTemplateToolTipRepoSpan {
+	border: 1px solid #aaaaaa;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	padding: 7px 0 10px 0;
+}
+
+.oneui .cloudOEAppDetailsTemplateToolTip .dijitTextBox {
+	border: 0;
+}
+
+.cloudOEAppDetailsTemplateToolTipRepo {
+	font-weight: 700;
+	border: 0;
+	padding: 7px 10px 10px 10px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px; 
+	border-right: 1px solid #aaaaaa; /* TODO: Not in color palette */
+	background: #eeeeee;  /* TODO: Not in color palette */
+}
+
+.cloudOEAppDetailsTemplateToolTipInput {
+	border: 0;
+	padding: 2px 0 2px 0;
+	font-family: Courier;
+	color: #777; /* TODO: Not in color palette */
+	margin-left: -3px;
+	margin-top: 0;
+	width: 300px;
+}
+
+.cloudOEAppDetailsTemplateToolTipOr {
+	padding: 0 10px 0 10px;
+}
+
+.oneui .cloudOEAppDetailsTemplateToolTip .dijitButton {
+	margin: 0;
+}
+
+.oneui .cloudOEAppDetailsTemplateToolTip .dijitButton .dijitButtonNode {
+	min-width: 41px;
+	padding: 8px 6px 6px 6px;
+	outline: 0;
+}
+
+.cloudOEAppDetailsBoundServicesGridContainer, 
+.cloudOEAppDetailsUnboundServicesGridContainer {
+	width: 100%; 
+	padding: 0 !important;
+	height: 100%;
+}
+
+.cloudOEAppDetailsBoundServicesGrid, 
+.cloudOEAppDetailsUnboundServicesGrid  {
+	width: 100%;
+	height: 100%;
+}
+
+.cloudOEAppDetailsBoundServicesGrid .gridxRow td[colid="name"] .gridxCellWidget,
+.cloudOEBindServiceUnboundServicesGrid .gridxRow td[colid="name"] .gridxCellWidget {
+	padding-left: 20px;
+}
+
+.oneui .cloudOEAppDetailsBoundServicesGrid .gridxHeaderRow .gridxCell[colid="name"] .gridxSortNode,
+.oneui .cloudOEBindServiceUnboundServicesGrid .gridxHeaderRow .gridxCell[colid="name"] .gridxSortNode{
+	padding-left: 80px;
+}
+
+.cloudOEStandardOffsetArea, 
+.cloudOEAppDetailsToolbarDiv {
+	border: 1px solid #d9d9d9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f9f9f9)); 
+	background-image: -o-linear-gradient(#fff, #f9f9f9); 
+	background-image: -ms-linear-gradient(#fff, #f9f9f9); 
+	background-image: -moz-linear-gradient(#fff, #f9f9f9); 
+	background-image: -webkit-linear-gradient(#fff, #f9f9f9); 
+	background-image: linear-gradient(#fff, #f9f9f9);
+}
+
+.cloudOEAppDetailsTabContainer {
+	padding: 0 15px;
+	min-height: 800px;
+}
+
+.cloudOEAppDetailsTabContainer.cloudOETabContainer > .dijitTabPaneWrapper.dijitTabContainerTop-container {
+	border-top: 1px solid #f2efeb;	/* .cloudOEFloralWhite2 */
+}
+
+.cloudOEAppDetailsTabContainer.cloudOETabContainer .dijitTabListWrapper.dijitTabContainerTopNone.dijitAlignCenter {
+	margin-left: 138px;
+}
+
+.cloudOEAppDetailsServicesButtonDiv {
+	margin-bottom: 20px;
+	float: right;
+}
+
+.cloudOEAppDetailsServicesButtonDiv.EnvVar{
+	float: none;
+	margin-right: 30px;
+}
+
+.cloudOEAppDetailsServicesButtonDiv.EnvVar table{
+	width: 100%;
+}
+
+.cloudOEAppDetailsServicesButtonDiv.EnvVar .EnvVarButtons{
+	width: 100%;
+	text-align: center;
+}
+
+.cloudOEAppDetailsServicesButtonDiv.EnvVar .EnvVarMessage{
+	width: 25%;
+}
+
+/*.dj_ie .cloudOEAppDetails hr {
+	margin-left: -16px;
+}*/
+
+.cloudOEAppDetailsToolbarDivTable, 
+.cloudOEAppDetailsSummaryAreaPropertyDivTable {
+	 border-spacing: 0; 
+	padding: 0 0 0 0;
+	margin-top: 10px;
+}
+
+.cloudOEAppDetailsSummaryAreaPropertyDivTable {
+	margin-top: 10px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.cloudOEAppDetailsToolbarDivTable td, .cloudOEAppDetailsToolbarDivTable th {
+	padding: 3px 5px 3px 5px;
+	vertical-align: middle;
+}
+
+.cloudOEAppDetailsSummaryAreaPropertyDivTable td, .cloudOEAppDetailsSummaryAreaPropertyDivTable th {
+	padding: 1px 20px 1px 5px;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+.cloudOEAppDetailsSummaryAreaPropertyDivTable th {
+	min-width: 100px;
+	font-weight: 700;
+}
+
+.cloudOEAppDetailsSummaryAreaPropertyDivTable .dijitButton {
+	margin-left: 0;	
+}
+
+.cloudOEAppDetailsToolbarTable {
+	text-align: right;
+}
+
+.cloudOEAppDetailsToolbarTable td {
+	padding: 3px;
+}
+
+.cloudOEAppDetailsToolbarTable td > a > img {
+	margin-left: 5px;
+}
+
+.cloudOEAppDetailsToolbarTable a:link,
+.cloudOEAppDetailsToolbarTable a:visited,
+.cloudOEAppDetailsToolbarTable .cloudOERefresher {
+	font-weight: 300;
+	font-size: 12px;
+}
+
+.cloudOEAppDetailsToolbarTable .cloudOERefresher .dijitHover .dijitButtonText {
+	background-color: transparent;
+	background-image: none;
+}
+
+.cloudOEAppDetailsToolbarDivDomainTable {
+	margin-top: -2px;
+	margin-left: -2px;
+}
+
+.cloudOEAppDetailsToolbarDivDomainTable td {
+	vertical-align: middle;
+	padding:0 0 2px 0;
+}
+
+.cloudOEAppDetailsToolbarDivDomainTable td.cloudOEAppDetailsDomainInlineEdit div {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 300px;
+}
+
+/* Shorten the textbox in editMode so we don't get cutoff of domain dropdown */
+.cloudOEAppDetailsToolbarDivDomainTable .cloudOEAppDetailsDomainInlineEdit .dijitValidationTextBox {
+	max-width: 150px;
+}
+
+.cloudOEMissingAppDescription {
+	display: none;
+}
+
+.cloudOEAddDomain {
+	margin-top: 0;
+	margin-left: 12px;
+}
+
+.cloudOEAddDomain:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.cloudOEAppDetailsToolbarDivDomainTable img {
+	cursor: pointer;
+}
+
+.cloudOEAppDetailsToolbarDivTable td a span {
+	vertical-align: middle;
+}
+
+.cloudOEDisabledLinkContainer a {
+	opacity: 0.5;
+}
+
+.cloudOEDisabledLabel {
+	opacity: 0.5;
+}
+
+/* Really wanted to use pointer-events: none; on the <a> itself, but doesn't work in IE.
+*/
+.cloudOEDisabledLinkContainer a:hover {
+	cursor: default;
+	text-decoration: none;
+}
+
+.oneui .cloudOEBindService .dijitDialogPaneContentArea {
+	padding: 0;
+	margin: 18px 30px 0 30px;
+}
+.cloudOEBindServiceUnboundServicesGridContainer {
+	width: 650px;
+	height: 300px;
+}
+
+.cloudOEBindServiceUnboundServicesGrid {
+	width: 100%;
+	height: 100%;
+}
+
+.cloudOEAppInstanceChooserGridContainer {
+	width: 400px;
+	height: 100%;
+	border: 1px solid #d9d9d9;
+	padding: 0 !important;
+}
+
+.cloudOEAppInstanceChooserGrid {
+	width: 100%;
+	height: 100%;
+}
+
+.cloudOEAppDetailsMemberApps .cloudOEAppInstanceChooserGridContainer {
+	width: 420px;
+}
+	
+/* Usage */
+
+.cloudOEAppDetailsUsage {
+	background-color: #3b4b54;
+	margin-top: 35px;
+}
+
+.cloudOEAppDetailsUsage .cloudOEAppDetailsUsageResourcesCard {
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	margin-bottom: 25px;
+}
+
+.cloudOEAppDetailsUsageFiller {
+	height: 10px;
+	background-color: #3b4b54;
+}
+
+.cloudOEAppDetailsUsageTop, 
+.cloudOEAppDetailsInstancesTop,
+.cloudOEAppDetailsEnvVarsTop,
+.cloudOEFilesTop {
+	padding: 20px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 1.125em;
+}
+
+.cloudOEAppDetailsUsage hr,
+.cloudOEEnvVars hr,
+.cloudOEFiles hr {
+	color: #dfe6eb;
+	margin: 0;
+}
+
+.cloudOEAppDetailsUsageLayoutTable {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cloudOEAppDetailsUsageLayoutTable label,
+.cloudOEAppDetailsUsageStatsTable th,
+.cloudOEAppDetailsUsageAppInstancesGridContainer .gridxHeader,
+.cloudOEEnvVarsGridContainer .gridxHeader {
+	font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight: 600;
+	font-stretch: normal;
+	font-size: 0.75em;
+}
+
+.cloudOEAppDetailsUsageLayoutTable label {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.cloudOEAppDetailsUsageLayoutTable input {
+	font-weight: 300;
+	font-size: 1em;
+}
+
+.cloudOEAppDetailsUsageInstancesSpinnerCell {
+	padding: 25px 50px 5px 0;
+	vertical-align:middle;
+}
+
+.cloudOEAppDetailsUsageMemorySpinnerCell {
+	padding:15px 50px 5px 0;
+	vertical-align:top;
+}
+
+.oneui.cloudOE .cloudOEAppDetailsUsage .dijitSpinner  {
+	width:300px;
+}
+
+.cloudOEAppDetailsUsageButtonDiv {
+	padding: 20px 0 5px 0;
+	min-height: 75px;
+}
+
+.cloudOEAppDetailsUsageButtonDiv .btn:disabled,
+.cloudOEEnvVars .btn:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.cloudOEAppDetailsUsageStatsTableContainerCell {
+	padding: 0 5px 0 50px; 
+	border-left: 1px solid #d4d4d4; /* light gray */
+}
+
+.cloudOELayoutTable.cloudOEAppDetailsUsageStatsTable .dijitProgressBar.dijitProgressBarEmpty {
+	width:100px;
+}
+
+.cloudOEAppDetailsUsageSpinner {
+	width: 150px;
+}
+
+.cloudOEAppDetailsUsageStatsTableContainer {
+	padding: 25px;
+}
+
+.cloudOEAppDetailsUsageStatsTable {
+	border-collapse: collapse;
+}
+
+.cloudOEAppDetailsUsageStatsTable .MemoryQuotaHeader {
+	color: #00aed1;
+}
+
+.cloudOEAppDetailsUsageStatsTable th, 
+.cloudOEAppDetailsUsageStatsTable td {
+	padding: 5px;
+	white-space: nowrap;
+}
+
+.cloudOEAppDetailsUsageStatsTable td, 
+.cloudOEAppDetailsUsageStatsTable .cloudOESubTH, 
+.cloudOEAppDetailsUsageStatsTable .cloudOENumTH {
+	text-align: right;
+}
+
+.cloudOENumTH {
+	padding-left: 30px !important;
+}
+
+.cloudOEAppDetailsUsageStatsTable .cloudOEColoredRow {
+	background: none; /*#d4d4d4; */ /* cloudOELightGray */
+}
+
+.cloudOEAppDetailsUsageStatsTable .cloudOEHeaderRow,
+.cloudOEAppInstanceDetails .cloudOEAppDetailsUsageAppInstancesGridContainer .gridxHeader,
+.cloudOEEnvVarsGridContainer .gridxHeader {
+	border-bottom: 1px solid #3b4b54;
+}
+
+.cloudOEAppDetailsUsageStatsTable th {
+	min-width:65px;
+}
+
+.cloudOEAppDetailsUsageStatsTable td,
+.cloudOEAppDetailsUsageAppInstancesGridContainer .gridxRow .gridxCell,
+.cloudOEEnvVars .cloudOEEnvVarsGridContainer {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+}
+
+.cloudOEAppDetailsUsageAppInstancesGridContainer .gridxRow .gridxCell.rowId {
+	color: #00aed1;
+	font-weight: bold;
+}
+.cloudOEAppDetailsUsageAppInstancesGridContainer .gridxRow .gridxCell.timestamp {
+	color: #94a3ab;
+}
+
+.cloudOEAppDetailsUsageAppInstancesGridContainer,
+.cloudOEEnvVars .cloudOEEnvVarsGridContainer {
+	margin-bottom: 30px;
+	margin-left: 10px;
+	min-height: 170px;
+}
+
+.cloudOEAppInstanceDetails .cloudOEAppDetailsUsageAppInstancesGridContainer .gridxHeaderRow .gridxCell,
+.cloudOEEnvVars .cloudOEEnvVarsGridContainer .gridxHeaderRow .gridxCell {
+	text-transform: none;
+}
+
+.cloudOEAppDetailsUsageAppInstancesGridContainer .gridxBodyEmpty {
+	display: none;
+}
+
+.cloudOEAppDetailsInstancesStats {
+	color: #8781bd;
+	margin: 20px auto 25px auto;
+	width: 220px;
+}
+
+.cloudOEMainSectionHeader {
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	line-height: 35px;
+}
+
+.cloudOESecondarySectionHeader {
+	font-size: 19px;
+	letter-spacing: 0.1em;
+}
+
+.cloudOEAppDetailsUsageMessageArea {
+	margin: 20px auto;
+	width: 50%;
+}
+
+.cloudOEAppDetailsUsage .cloudOEAppInstanceDetails {
+	background-color: #ffffff;
+	border-top: 1px solid #ffffff;
+	border-radius: 3px;
+	margin-bottom: 35px;
+}
+
+
+.cloudOEAppInstanceDetails .cloudOEAppDetailsUsageMessageArea .cloudOEMessageAreaText {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 0.75em;
+}
+
+.cloudOEAppInstanceDetails .cloudOEAppDetailsUsageMessageArea .cloudOEMessageAreaTextCell {
+	padding-top: 10px;
+}
+
+/* Env Vars */
+.cloudOEEnvVars .btn-group {
+	margin-top: 15px;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width: 270px;
+}
+
+.cloudOEEnvVars .btn-group label input[type="radio"] {
+	display: none;
+}
+
+.cloudOEEnvVars .btn-group label span {
+	color: #3b4b54;
+	background-color: #dfe6eb;
+	margin-left: -4px;
+	border-radius: 3px;
+}
+
+.cloudOEEnvVars .btn-group input:checked + span {
+	color: #ffffff;
+	background-color: #00b299;
+}
+
+
+/* Files */
+.cloudOEFilesInstanceSelectPane {
+	margin: 20px;
+}
+
+.cloudOEFiles {
+	margin-top: 35px;
+}
+
+.cloudOEFiles label {
+	font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight: 600;
+	font-size: 0.75em;
+}
+
+.cloudOEFilesDetails {
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosLight', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	vertical-align: middle;
+}
+
+.cloudOEFilesDetailsEmpty,
+.cloudOEFilesContentEmpty {
+	font-style: italic;
+}
+
+.cloudOEFilesContentEmpty {
+	white-space: pre-wrap;
+}
+
+.cloudOEFiles .cloudOEFilesLeftSide {
+	width: 250px;
+	display: inline-block;
+	float: left;
+	vertical-align: top;
+	border-right: 1px solid #00aed1;
+	height: 100%;
+}
+
+.cloudOEFiles .cloudOEFilesRightSide {
+	overflow: scroll;
+	margin: 0 10px;
+	height: 100%;
+	max-width: 650px;
+}
+
+.cloudOEFiles .cloudOEFilesTree .dijitTree {	
+	background-color: #ffffff;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.cloudOEFiles .cloudOEFilesLeftSide .cloudOEFilesTree .dijitTreeRow {
+	color: #000000;
+	font-weight: 300;
+	font-size: 0.75em;
+}
+
+.cloudOEFiles .cloudOEFilesLeftSide .cloudOEFilesTree .dijitTreeRow .dijitTreeExpando {
+	margin-left: 25px;
+}
+
+.cloudOEFiles .cloudOEFilesLeftSide.FilesTree .cloudOEFilesTree .dijitTreeRow .dijitTreeExpando.dijitTreeExpandoClosed {
+	background: url('dt/imgs/sprite_ace.png') no-repeat -40px -15px;
+	width: 9px;
+	height: 9px;
+}
+
+.cloudOEFiles .cloudOEFilesLeftSide.FilesTree .cloudOEFilesTree .dijitTreeRow .dijitTreeExpando.dijitTreeExpandoOpened {
+	background: url('dt/imgs/sprite_ace.png') no-repeat -39px -31px;
+	width: 9px;
+	height: 8px;
+}
+
+.cloudOEFiles .cloudOEFilesLeftSide .cloudOEFilesTree .dijitTreeRowHover.dijitTreeRow {
+	color: #ffffff;
+	border-radius: 3px;
+}
+
+.cloudOEFiles .cloudOEFilesLeftSide .cloudOEFilesTree .dijitTreeRowSelected.dijitTreeRow {
+	color: #ffffff;
+	border-radius: 3px;
+}
+
+.cloudOESpriteIcon.cloudOEDocument {
+	width: 24px;
+	height: 20px;
+	background-size:12px 16px;
+	background-repeat:no-repeat;
+	background-position: 0;
+	background-image: url('img/doc_icon.png');
+}
+
+.cloudOESpriteIcon.cloudOEFolderOpened,
+.cloudOESpriteIcon.cloudOEFolderClosed {
+	background-image: url('img/file_icon.png');
+	width:24px;
+	height:20px;
+	background-size:16px 14px;
+	background-repeat:no-repeat;
+	background-position: 0;
+}
+
+.cloudOEFilesTree .dijitTreeExpando.dijitTreeExpandoClosed {
+	background-image: url('img/arrow_closed.png');
+	width:4px;
+	height:10px;
+	background-repeat:no-repeat;
+	background-position: 0;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.cloudOEFilesTree .dijitTreeExpando.dijitTreeExpandoOpened {
+	background-image: url('img/arrow_open.png');
+	width:10px;
+	height:4px;
+	background-repeat:no-repeat;
+	background-position: 0;
+}
+
+.cloudOEFiles .cloudOETableCellToolbar .dijitButton.dijitButtonHover .dijitButtonNode,
+.cloudOEFiles .cloudOETableCellToolbar .dijitButton.dijitHover .dijitButtonNode {
+	background-color: transparent;
+	background-image: none;
+	border: 0;
+	-webkit-box-shadow: 0;
+	-moz-box-shadow: 0;
+	box-shadow: 0;
+}
+
+.cloudOEFilesCenterContentPane {
+	padding: 0;
+	border-radius:12px;
+	border: 1px solid #175275 !important; /* NOTE: Uses color from cloudOEDarkBlue */
+}
+
+.oneui .cloudOEFilesTree .dijitTreeRow {
+	font-size: 14px;
+	padding: 0;
+	border: none;
+	padding-top: 9px;
+	height: 25px;
+}
+
+.cloudOEFilesTree {
+	height:100%;
+}
+
+.cloudOEFilesTree .dijitTreeLabel {
+	margin-left:5px;
+}
+
+.cloudOEFiles pre, .cloudOEEnvVars pre {
+	padding: 5px 8px 8px 8px;
+	background: transparent;
+	border: none;
+	overflow: visible;
+}
+
+.cloudOEFilesFileArea {
+	padding: 0 0 0px 0 !important;
+	background:white;
+}
+
+.oneui.cloudOE .cloudOEEnvVarsVCAPArea {
+	overflow: auto;
+	background-color: #26343f;
+	padding: 15px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	width: 100%;
+	margin-bottom: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.cloudOEFiles pre, .cloudOEEnvVars pre {
+	padding: 8px 8px 8px 8px;
+	background: transparent;
+	border: none;
+	overflow: visible;
+	color: #000000;
+	font-size: 13px;
+	line-height: 16px;
+	font-family: Menlo,Monaco,"Lucida Console",monospace;
+}
+
+.cloudOEFiles pre {
+	padding: 20px;
+}
+
+.cloudOEEnvVars pre {
+	color: #dfe6eb;
+}
+
+.cloudOEEnvVars pre {
+	padding: 15px 15px 15px 15px;
+}
+
+.cloudOEEnvVarsEmptyVCAP {
+	font-style: italic;
+
+}
+
+/* Manage (aka Organizations and Spaces) */
+
+.cloudOEManage hr {
+	color: #b3b3b3;
+}
+
+.cloudOEManageTitleLine {
+	margin-left: 20px;
+}
+
+.cloudOEManageMainContainer {
+	padding: 20px 20px;
+}
+
+.oneui .cloudOEManageMainContainer > .cloudOEBorderContainer {
+	min-height: 650px;
+}
+
+.cloudOEManageHeader {
+	display: table;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.cloudOEManageTitle {
+	display: table-cell;
+	padding-right: 1em;
+	padding-left: 40px;
+    font-weight: 300;
+    font-size: 1.500em;
+	color: #dfe6eb;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.cloudOEManageCreateOrg {
+	display: table-cell;
+	padding-right: 28px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.cloudOEManageCreateOrg > div {
+	display: block;
+	white-space: nowrap;
+}
+
+.cloudOEManageCreateOrg a {
+	font-size: 0.875em;
+	font-weight: 700;
+	color: #dfe6eb;
+	background-color: #26343f;
+	padding:6px 10px;
+}
+
+.cloudOEManageCreateOrg a:hover {
+	background-color: #2c3c49;
+}
+
+.cloudOEManageMainContainer > hr {
+	clear: both;
+}
+
+.cloudOEManage .cloudOEBorderContainer {
+	min-width: 0;
+}
+
+.cloudOEManageSidebar {
+	width: 22%;
+	margin-left: 20px;
+}
+
+.cloudOEManageRefresher.cloudOERefresher {
+	padding-top: 0px;
+}
+
+.oneui .cloudOEManageRefresher.cloudOERefresher .dijitButton .dijitButtonNode {
+	min-width: 0;
+	padding: 0 6px 0 6px;
+}
+
+.oneui.cloudOE .cloudOEManageSidebar .cloudOERefresher .dijitButtonNode:hover {
+	background: transparent;
+}
+
+.cloudOEManageRefresher .cloudOETimeSinceLabel {
+	font-size: 0.875em;
+	font-weight: 700;
+	color: #dfe6eb;
+}
+
+.cloudOEManageRefresher .i-refresh-large {
+  height: 26px;
+}
+
+.cloudOEManageRefresher .cloudOETimeSinceLabelLeftSeparator {
+	border-color: #d4d4d4; /* cloudOELightGray */
+}
+
+.oneui .dijitStackContainer .cloudOEManageMainContent.dijitContentPane {
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+.cloudOEManageGeneralEdit {
+	padding: 13px 20px 15px 20px;
+	width: 660px;
+	background-color: #ffffff;
+}
+
+.cloudOEManageNameEdit {
+	display: inline;
+}
+
+.cloudOEManageEntityLabel {
+	display: inline;
+	padding-right: 10px;
+	font-size: 0.875em;
+	font-weight: 700;
+	color: #26343f;
+}
+
+.cloudOEManageEntityName {
+	font-size: 14px;
+	font-weight: 300;
+	color: #3b4b54;
+}
+
+.cloudOEManageEntityNameEditContainer {
+	display: inline;
+	padding-right: 10px;
+}
+
+.cloudOEManageDeleteOrg {
+	display: inline;
+}
+
+.cloudOEManageDeleteOrg .dijitButton {
+	margin: 0 0 0 8px;
+}
+
+.oneui .cloudOEManageDeleteOrg .dijitButton .dijitButtonNode {
+	min-width: 0;
+	padding: 0;
+	background: transparent;
+}
+
+
+.oneui .cloudOEManageDeleteOrg .dijitButton .dijitButtonNode:hover {
+	background: transparent;
+}
+
+.cloudOEManageCreateDeleteSpace {
+	float: right;
+	color: #ffffff;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.oneui.cloudOE .cloudOEManageCreateDeleteSpace .dijitButton .dijitButtonNode {
+	margin: 0;
+	text-transform: none;
+  	background-color: #00b299;
+	font-size: 0.75em;
+	font-weight: 700;
+	vertical-align: middle;
+	height: 30px;
+}
+
+.oneui.cloudOE .cloudOEManageCreateDeleteSpace .dijitButton .dijitButtonNode:hover{
+  	background-color: #01cdb0;
+}
+
+.cloudOEManageTableButtonContainer .dijitButton.cloudOESecondaryActionButton .dijitButtonNode,
+.cloudOEManageTableButtonContainer .dijitButton.cloudOESecondaryActionButton.dijitButtonDisabled .dijitButtonNode:hover {
+	color: #3b4b54;
+  	background-color: #dfe6eb;
+	font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  	font-weight: 600;
+  	font-stretch: normal;
+  	font-size: 0.875em;
+  	display: inline-block;  	
+  	font-weight: normal;
+  	cursor: pointer;
+  	padding: 6px 12px;
+  	height: 20px;
+  	border: 1px solid transparent;
+  	border-radius: 4px;
+  	line-height: 1.428571429;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	-o-user-select: none;
+  	user-select: none;
+  	text-transform: uppercase;
+}
+
+.cloudOEManageTableButtonContainer .dijitButton.cloudOESecondaryActionButton .dijitButtonNode:hover {
+	background-color: #e9eff2;	
+}
+
+.cloudOEManageTabsContentPane {
+	background-color: #ffffff;
+	border-top: 1px solid #ffffff;
+	border-radius: 3px;
+	width: 700px;
+	margin-top: 20px;
+	padding: 13px 20px 15px 20px;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer {
+	clear: both;
+	padding: 13px 20px 15px 20px;
+	height: 456px;
+	width: 660px;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer .dijitTabListWrapper.dijitTabContainerTopNone.dijitAlignCenter {
+	margin-left: 187px;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer.space .dijitTabListWrapper.dijitTabContainerTopNone.dijitAlignCenter {
+	margin-left: 227px;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer  > .dijitTabListContainer-top .dijitTab {
+	color: #3b4b54;
+  	background-color: #dfe6eb;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer  > .dijitTabListContainer-top .dijitTab:hover {
+  	background-color: #e9eff2;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer  > .dijitTabListContainer-top .dijitTab:not(:first-child):not(:last-child) {
+    border-radius: 0px 0px 0px 0px;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer  > .dijitTabListContainer-top .dijitTab:first-child {
+    border-radius: 3px 0px 0px 3px;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer  > .dijitTabListContainer-top .dijitTab:last-child {
+    border-radius: 0px 3px 3px 0px;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer .dijitTabPaneWrapper.dijitTabContainerTop-container {
+	padding-top: 0;
+}
+
+.cloudOEManageTabContainer.cloudOETabContainer > .dijitTabPaneWrapper.dijitTabContainerTop-container {
+	margin: 0;
+}
+
+.cloudOEManageSaveReset {
+	float: right;
+	padding-right: 30px;
+	margin-bottom: 20px;
+}
+
+.cloudOEManageSaveReset .cloudOEUnsavedChangeInlineMsg {
+	margin-right: 2em;
+}
+
+.cloudOEManageSaveReset .btn:disabled,
+.cloudOEManageSaveReset .btn:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+
+.oneui .cloudOESimpleDialog .dijitDialogTitle{
+	text-transform: none;
+}
+
+.oneui .cloudOESimpleDialogContentAreaContentDiv {	
+	padding: 0;
+	margin: 15px 25px 0 25px;
+	color: #94A3AB; 
+}
+
+.cloudOESimpleDialogContentAreaTextLabel{
+	display:inline;
+}
+
+.cloudOESimpleDialogContentAreaTextBox{
+	width: 20em;
+}
+
+.oneui .dijitTextBoxError .dijitValidationContainer{
+	background: url('dt/imgs/sprite_ace.png') no-repeat -68px -32px;	
+	width: 16px;
+	height: 16px;
+}
+
+.oneui .dijitComboBoxMenu .dijitMenuItem {
+	color: #000000;
+}
+
+/* Magnet Tree widget */
+
+.cloudOEManageMagnetTree {
+	font-size: 0.75em;
+	font-weight: 500;
+	margin-top: 15px;
+	color: #dfe6eb;
+}
+
+.magnetTreeNodeRow {
+	padding: 3px 5px 4px;
+}
+
+.magnetTreeNodeRow:hover {
+	color: #e9eff2;	
+}
+
+.magnetTreeNodeSelected {
+	color: #dfe6eb;
+	background-color: #26343f;
+}
+
+.cloudOEMagnetTree .magnetTreeOuterContainer > .magnetTreeNode {
+	margin-bottom: 10px;
+}
+
+.magnetTreeNodeSubMenu{
+	margin-left: 0px;
+}
+
+.magnetTreeNodeLinkContainer {
+	font-weight: 700;
+	display: block;
+}
+
+.magnetTreeNodeLinkContainer .magnetTreeNodeIcon {
+	margin-top: 2px; /* align with magnetTreeNodeLink */
+}
+
+.magnetTreeNodeLink {
+	display: block;
+	cursor: pointer;
+}
+
+.magnetTreeNodeSubMenu .magnetTreeNodeLink {
+	padding-left: 10px;
+}
+
+.magnetTreeNodeIcon {
+	float: left;
+	cursor: pointer;
+	width: 10px;
+	margin-right: 10px;
+	margin-left: 8px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* Navigation Tree widget */
+.cloudOENavigationCategory .navigationTreeNodeSelected.name {
+  width: 225px;
+  background-color: #00b299;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: table;
+  color: #ffffff;
+  box-shadow: 0 0 10pt 1pt rgba(0, 0, 0, 0.3);
+}
+
+.cloudOENavigationCategory .navigationTreeNodeSelected.name:hover {
+  width: 225px !important;
+  background-color: #00b299;
+}
+.cloudOENavigationCategory .name{
+	line-height: 40px;
+}
+.cloudOENavigationCategory .name .title {
+  width: 155px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 155px;
+}
+.cloudOENavigationCategory.nav-category .name .next {
+  display: table-cell;
+ }
+.cloudOENavigationCategory .navigationTreeNodeSelected .name .next {
+  display: table-cell;
+  width: 20px;
+  height: 100%;
+  vertical-align: middle;
+}
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren{
+  border-bottom: 1px solid rgba(122, 137, 145, 0.3);
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name {
+  line-height: normal;
+  height: 0;
+}
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name.selectable {
+	line-height: 40px;
+}
+
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name .linkContainer {
+	padding-left: 40px;
+	position: relative;
+}
+
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name .icon {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #00b299;
+	position: absolute;
+	top: 3px;
+	left: 18px;
+	margin: 0;
+	padding: 0;
+}
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name.selectable .icon {
+	top: 17px;
+}
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name.selectable.navigationTreeNodeSelected .icon {
+	background-color: #FFFFFF;
+}
+
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name .title {
+  margin-bottom: 10px;
+  font-family: "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 0.75em;
+  position: relative;
+  letter-spacing: 0;
+  padding-left: 0;
+  /* so arrow at right shows up in correct position: */
+  padding-right: 12px;
+}
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name:hover {
+  cursor: pointer;
+  background-color: inherit;
+}
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name.selectable:hover {
+	background-color: #135c6f;
+}
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .navigationTreeNodeSelected.name.selectable:hover {
+	background-color: #00b299;
+}
+.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name .title:hover {
+  color: #ffffff;
+}
+
+/*.cloudOENavigationCategory .navigationTreeNodeSubMenu .navigationTreeNodeChildren .name .title:before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #00b299;
+  position: absolute;
+  top: 3px;
+  left: -15px;
+}*/
+
+/* Center Status Circle */
+.third-column .center {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	-webkit-border-radius: 50%;
+  	-moz-border-radius: 50%;
+  	border-radius: 50%;
+  	border: 5px solid #94a3ab;
+  	height: 76px;
+  	width: 76px;
+}
+
+.third-column .center.grey {
+	border-color: #94a3ab;
+}
+
+.third-column .center.red {
+	border-color: #f04e37;
+}
+.third-column .center.yellow {
+	border-color: #f3f00a;
+}
+.third-column .center.green {
+	border-color: #13dd6d;
+}
+
+/* Center Status Status Dot */
+.monitor-widgets .third-column {
+	vertical-align: top;
+}
+
+.CenterStatusBorder {
+	background: transparent;
+	vertical-align: middle;
+}
+
+.CenterStatusImg {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.CenterStatusImg.i-dashboard-widget-bad
+{
+	margin-top: 3px;
+}
+
+.StatusDotContainer {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 7px;
+	max-width: 150px;
+}
+
+.DashboardStatusDot {
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	background-color: #94a3ab;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+.DashboardStatusDot.grey {
+	background-color: #94a3ab;
+}
+.DashboardStatusDot.red {
+	background-color: #f04e37;
+}
+.DashboardStatusDot.yellow {
+	background-color: #f3f00a;
+}
+.DashboardStatusDot.green {
+	background-color: #13dd6d;
+}
+
+.DashboardStatusDot:hover {
+	box-shadow: 0px 0px 1pt 2pt #00aed1;
+  	cursor: pointer;
+}
+
+/* Organizations page tab content styling */
+
+.oneui .dijitStackContainer .dijitContentPane.cloudOEManageUsersUsersGridContainer,
+.oneui .dijitStackContainer .dijitContentPane.cloudOEManageDomainsDomainsGridContainer,
+.oneui .dijitStackContainer .dijitContentPane.cloudOEManageQuotaQuotaGridContainer {
+	margin-top: 20px;
+}
+
+.oneui .cloudOEManageDomains .cloudOELayoutTable {
+	padding: 20px 0 0 20px;
+	color: #3b4b54;
+}
+
+.oneui .cloudOEManageDomains .cloudOELayoutTable td {
+	padding-bottom: 0;
+}
+
+.cloudOEManageDomainsDomainType {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.cloudOEManageDomainsDomainValue {
+	font-size: 16px;
+	padding-left: 10px;
+}
+
+.cloudOEManageQuotaLimitGood {
+	color: #0B9B77; /* TODO: Not in color palette */
+}
+
+.cloudOEManageQuotaLimitWarn {
+	color: #FACF44; /* TODO: Not in color palette */
+}
+
+.cloudOEManageQuotaLimitCritical {
+	color: #C85355; /* TODO: Not in color palette */
+}
+
+.cloudOEManageQuotaSeparator {
+	padding: 0 5px;
+}
+
+.cloudOEManageUsersUsersGrid,
+.cloudOEManageDomainsDomainsGrid,
+.cloudOEManageQuotaQuotaGrid{
+	padding: 0 20px;
+	margin-bottom: 20px;
+	overflow: auto;
+	height: 280px !important;
+}
+
+.oneui .cloudOEManageUsersUsersGrid .dijitButton .dijitButtonNode:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.oneui .cloudOEManageUsersUsersGrid .gridxVScroller,
+.oneui .cloudOEManageDomainsDomainsGrid .gridxVScroller {
+	border-right: 0 none;
+}
+
+.oneui .cloudOEManageUsersUsersGrid .gridxVScroller div,
+.oneui .cloudOEManageDomainsDomainsGrid .gridxVScroller div {
+	width: 8px !important;
+}
+
+.cloudOEManageTableButtonContainer {
+	margin-top: 15px;
+	margin-left: 20px;
+	border:none;
+	padding:0
+}
+
+.cloudOEManageUsersUsersGrid td[colid='manager'].gridxCell,
+.cloudOEManageUsersUsersGrid td[colid='billing_manager'].gridxCell,
+.cloudOEManageUsersUsersGrid td[colid='developer'].gridxCell,
+.cloudOEManageUsersUsersGrid td[colid='auditor'].gridxCell,
+.cloudOEManageQuotaQuotaGrid td[colid='services'].gridxCell {
+	text-align: center;
+}
+
+.cloudOEManageUsersUsersGrid td[colid='deleteuser'].gridxCell {
+	padding-right: 20px;
+}
+
+.oneui .cloudOEManageQuotaQuotaGrid td[colid='memQuota'].gridxCell {
+	padding-right: 20px;
+}
+
+.oneui .cloudOEManageQuotaQuotaGrid td[colid='services'].gridxCell {
+	padding-right: 80px;
+}
+
+.oneui .cloudOEManageQuotaQuotaGrid .gridxRow .gridxCell,
+.oneui .cloudOEManageQuotaQuotaGrid .gridxHeaderRow .gridxCell {
+	padding-right: 50px
+}
+
+.oneui .cloudOEManageUsersUsersGrid .gridxRow .gridxCell,
+.oneui .cloudOEManageUsersUsersGrid .gridxHeaderRow .gridxCell {
+	padding-right: 20px;
+}
+
+.oneui .cloudOEManageDomainsDomainsGrid .gridxHeaderRow td[colid='actions'].gridxCell {
+	min-width: 70px !important;
+}
+
+.oneui .cloudOEManageUsersUsersGrid .gridxHeaderRow td[colid='username'].gridxCell,
+.oneui .cloudOEManageDomainsDomainsGrid .gridxHeaderRow td[colid='domain'].gridxCell,
+.oneui .cloudOEManageQuotaQuotaGrid .gridxHeaderRow td[colid='memQuota'].gridxCell {
+	padding-left: 10px;
+}
+
+.oneui .cloudOEManageUsersUsersGridContainer .gridxRow td[colid='username'].gridxCell,
+.oneui .cloudOEManageDomainsDomainsGridContainer .gridxRow td[colid='domain'].gridxCell,
+.oneui .cloudOEManageQuotaQuotaGridContainer .gridxRow td[colid='memQuota'].gridxCell{
+	font-size: 14px;
+	padding-left: 10px;
+	font-weight: 700;
+}
+
+.oneui .cloudOEManageUsersUsersGridContainer .gridxRow .gridxCell,
+.oneui .cloudOEManageDomainsDomainsGridContainer .gridxRow .gridxCell,
+.oneui .cloudOEManageQuotaQuotaGridContainer .gridxRow .gridxCell {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* Have to use important here because oneui uses important */
+.oneui .cloudOEManageUsersUsersGridContainer .gridx .dijitToolbar .dijitButton .dijitButtonNode,
+.oneui.cloudOE .cloudOEManageDomainsDomainsGridContainer .gridx td[colid="actions"].gridxCell .dijitToolbar .dijitButton .dijitButtonNode {
+	padding: 0 !important;
+}
+
+.oneui .gridxRow .gridxRowTable {
+	width: 100%;
+}
+
+/************************************/
+/*			Sprite icons			*/
+/************************************/
+.cloudOEIcon {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	background-image:url("img/cloudOE_icons.png"); /* TODO: Plan would be to stop using this file in favor of cloudOE_icon_sprite.png (see cloudOE_sprite.css) */
+}
+
+.cloudOETableCellNameIcon {
+	width: 40px;
+	height: 40px;
+}
+
+.cloudOETableCellNameIcon {
+	vertical-align:middle;
+	padding-right: 20px;
+}
+
+.cloudOEIconCheckmark {
+	background-position: -78px -7px;
+}
+
+.cloudOEIconDownload {
+	background-position: -158px -8px;
+}
+
+.cloudOEIconLaunchDocs {
+	background-position: -342px -8px;
+}
+
+.cloudOEIconEditSource {
+	background-position: -418px -8px;
+}
+
+.cloudOEIconEditField {
+	background-position: -436px -8px;
+}
+
+.cloudOEIconArrowUp {
+	background-position: -456px -8px;
+}
+
+.cloudOEIconArrowRight {
+	background-position: -480px -8px;
+}
+
+.cloudOEIconArrowDown {
+	background-position: -507px -8px;
+}
+
+.cloudOEIconArrowLeft {
+	background-position: -532px -8px;
+}
+
+.cloudOEIconArrowUpDisabled {
+	background-position: -556px -8px;
+}
+
+.cloudOEIconArrowRightDisabled {
+	background-position: -581px -8px;
+}
+
+.cloudOEIconArrowDownDisabled {
+	background-position: -607px -8px;
+}
+
+.cloudOEIconArrowLeftDisabled {
+	background-position: -633px -8px;
+}
+
+/*
+ * Slosh bucket
+ */
+.oneui .cloudOESloshBucketButton .dijitButtonNode {
+	width: 26px;
+	min-width: 26px;
+	padding: 3px 0 4px 0 !important;
+}
+
+.cloudOESloshBucketLabel {
+	font-weight: 700;
+}
+
+/*
+ * TabContainer widget
+ */
+
+.cloudOETabContainer {
+	height: 100%;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.cloudOETabContainer > .dijitTabPaneWrapper.dijitTabContainerTop-container {
+	margin: 0 25px;
+	padding-top: 10px;
+	border: 0;
+}
+
+.cloudOETabContainer,
+.cloudOETabContainer > .dijitTabListContainer-top .dijitTab {
+	background: transparent;
+}
+
+.cloudOETabContainer > .dijitTabListContainer-top .nowrapTabStrip.dijitTabContainerTop-tabs {
+	border: none;
+	margin: 10px 0;
+	position: relative;
+  	display: inline-block;
+  	vertical-align: middle;
+}
+
+.cloudOETabContainer .dijitTabListWrapper.dijitTabContainerTopNone.dijitAlignCenter {
+	left: 0 !important;
+	width: 100% !important;
+}
+
+.cloudOETabContainer > .dijitTabListContainer-top .dijitTab {
+  font-weight: 600;
+  font-stretch: normal;
+  font-size: 0.875em;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.cloudOETabContainer > .dijitTabListContainer-top .dijitTab.firstTab {
+	border-left: 1px;
+}
+
+.cloudOETabContainer > .dijitTabListContainer-top .dijitTab.dijitHover {
+	background-image: none;
+}
+
+.cloudOETabContainer > .dijitTabListContainer-top .dijitTab.dijitTabChecked {
+	color: #ffffff;
+  	background-color: #00b299;
+}
+
+.cloudOETabContainer > .dijitTabListContainer-top .dijitTab.dijitTabChecked:hover {
+  	background-color: #01cdb0;
+}
+
+.cloudOETabContainer > .dijitTabListContainer-top .dijitTab > .tabLabel {
+	padding: 4px 2px 0;
+	text-transform: uppercase;
+}
+
+/*
+ * GridX and toolbar related styles
+ */
+
+.oneui .cloudOETableCellToolbar {
+	background: none;
+	border: none;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.oneui .cloudOETableCellToolbar .dijitButton {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.oneui .gridxCell {
+	vertical-align: middle !important;
+}
+
+.oneui .gridxHeaderRow {
+ 	background: none !important;
+}
+
+.oneui .gridx .gridxHeader .gridxHeaderRow .gridxHeaderRowInner .gridxCell.gridxHeaderCellFocus {
+    background: #fafafa;
+    border: 1px dashed darkblue;
+}
+
+.oneui .cloudOEToolbar {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+ 
+.oneui .cloudOEToolbar .dijitButton {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.oneui .dijitToolbar {
+	outline: none;
+}
+
+/* This may be applied across a wider swath of columns than we need to, but
+   the goal of this style class is for cells with icons and potentially 
+   long labels (like app name, service name, etc.) to not wrap (e.g., don't
+   want label to appear below icon) and to show an ellipis if too long.
+*/
+.oneui .gridxCell, 
+.oneui .gridxCellWidget, 
+.oneui .gridxTreeExpandoCell,
+.cloudOETextWithEllipsis {
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+
+.oneui .gridxTreeExpandoIcon {
+	/* Maybe not best way to do it, but want expando vertically centered against app icon, and 
+	   vertical-align: middle in various places didn't seem to work. 
+	*/
+	margin-top: 12px; 
+}
+
+.cloudOE .gridxSortNode:hover {
+	/* Change mouse icon to pointer on sortable header hover. */
+	cursor: pointer;
+}
+
+/* compact -- overriding OneUI compact classes a bit because don't like smaller font size (they use 11px) and want less padding */
+.oneui .compact .gridxHeaderRow .gridxCell {
+	padding: 7px 4px; /* Normal (non-compact) is 13px 7px */
+	font-size: 12px;
+}
+
+.oneui .compact .gridxBody .gridxCell {
+	padding: 4px;  /* Normal (non-compact) is 10px 7px */
+	font-size: 12px;
+}
+
+.oneui .gridxRow .gridxCell {
+	font-size: 16px;
+	border: none;
+	padding: 10px 35px 10px 0;
+}
+
+.oneui .gridxRow .gridxCell[colid="buildpack"],
+.oneui .gridxRow .gridxCell[colid="health"] {
+	font-weight: normal;
+}
+
+.oneui .gridxRowHeaderHeader {
+	background: none;
+	border-right: none;
+}
+
+.oneui .gridxRowHeaderRow {
+	background: none;
+}
+
+.oneui .gridxRowHeaderRow .gridxRowHeaderCell {
+	border: 0;
+} 
+
+.oneui .gridxFullPage .gridxHeader .gridxHeaderRow {
+	border: none;
+}
+
+.oneui .gridxHeaderRow .gridxCell {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding: 0 35px 10px 0;
+	border: none;
+}
+
+.gridxFullPage .gridxHeader .gridxHeaderRow .gridxCell {
+	padding-top: 3px; /* Add some padding so hover effect looks ok */
+}
+
+.gridxFullPage .gridxHeader .gridxHeaderRow .gridxCell:hover,
+.oneui .gridx .gridxHeader .gridxHeaderRow .gridxHeaderRowInner .gridxCell.gridxHeaderCellFocus:hover {
+	background-color: #cce8f2; /* TODO: Not in palette */
+}
+
+.oneui.cloudOE .gridx .gridxHeader .gridxHeaderRow .gridxHeaderCellFocus {
+	background: transparent;
+}
+
+.oneui .gridxHeaderRow .gridxCell[colid="name"] .gridxSortNode {
+	padding-left: 76px;
+}
+
+.oneui td[colid='actions'].gridxCell {
+	padding-right: 10px;
+}
+
+.oneui .gridxRowHeaderBody {
+	border: none;
+}
+
+.oneui.cloudOE .gridxAlternatingRows .dijitButton .dijitButtonNode {
+	background: transparent;
+}
+
+/* Have to use important here because oneui style uses it */
+.oneui.cloudOE .gridx td[colid="actions"].gridxCell .dijitToolbar .dijitButton .dijitButtonNode {
+	padding: 5px 15px 5px 0 !important;
+}
+
+.oneui.cloudOE .gridx td[colid="actions"].gridxCell .dijitToolbar .dijitButton .dijitButtonNode:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.oneui .gridxAlternatingRows .cloudOETableCellToolbar {
+	padding: 0;
+}
+
+.oneui .gridxAlternatingRows .cloudOETableCellToolbar .dijitButton {
+	margin: 0;
+}
+
+.gridxBodyEmpty {
+	/* This is an attempt to make table look a little better when empty... */
+	
+	border: 1px solid #EFF3F7; /* Using border that's same color as the first row so as rows are added, it's not apparent */
+	
+	/* NOTE: Kind of a hack, but there's a widespread issue where last pixel of div cut off. */
+	width: 99%; 
+	
+	/* Trying to make empty area take less vertical space because other wise it shows until more than 4 rows added... */
+	padding: 7px 0;
+	height: 20px;
+}
+
+.cloudOEGridxEmptyEnhanced .gridxBodyEmpty {
+	border: 0;
+	width: 100%;
+	height: 120px;
+	padding: 0;
+
+	background-color: #29a9e1;
+	background-image: url('img/single_arrow.png');
+	background-repeat: no-repeat;
+	background-position: 640px 40px;
+	
+	text-align: left;
+}
+
+.cloudOEGridxEmptyEnhanced.cloudOEGridxEmptyEnhancedDoubleArrow .gridxBodyEmpty {
+	background-image: url('img/double_arrow.png');
+	background-position: 380px 40px;
+}
+
+.cloudOEGridxEmptyEnhanced .gridxBodyEmpty div {
+	margin-left: 80px;
+	color: #ffffff;
+	font-size: 1.000em;
+	font-weight: 500;
+}
+
+.cloudOEGridxEmptyEnhanced .gridxBodyEmpty div:first-child {
+	margin-top: 40px;
+	color: #454748;
+	font-size: 1.500em;
+	font-weight: 200;
+	padding-bottom: 12px;
+}
+
+.cloudOEGridxEmptyEnhanced.cloudOEGridxEmptyEnhancedReversedFonts .gridxBodyEmpty div {
+	font-size: 1.500em;
+	font-weight: 200;
+}
+
+.cloudOEGridxEmptyEnhanced.cloudOEGridxEmptyEnhancedReversedFonts .gridxBodyEmpty div:first-child  {
+	font-size: 1.000em;
+	font-weight: 500;
+	padding-bottom: 4px;
+}
+
+.oneui .gridxRow:last-child .gridxCell {
+	border-bottom: 0;
+}
+
+.oneui .gridxFooter {
+	display: none;
+}
+
+.cloudOEGridxNameIcon {
+	outline: none;
+	cursor: pointer;
+}
+
+/****************************/
+.cloudOESecondaryHeader, .cloudOESmallHeader {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.cloudOEPaneHeader {
+	font-size: 24px;
+}
+
+.cloudOEPaneHeader.BoldHeader{
+	font-weight: 700;
+}
+
+.cloudOEPaneHeader.LightHeader{
+	font-weight: 300;
+}
+ 
+/*.cloudOEAppDetails .cloudOEPaneHeader,*/
+.cloudOEServiceInstanceDetails .cloudOEPaneHeader {
+	font-size: 32px;
+}
+
+.cloudOESecondaryHeader {
+	font-size: 18px;
+}
+
+.cloudOESmallHeader {
+	font-size: 12px;
+}
+
+.cloudOELayoutTable {
+	border-spacing: 5px;
+}
+
+.cloudOELayoutTable td, 
+.cloudOELayoutTable th {
+ 	white-space: nowrap;
+ 	padding: 5px;
+}
+
+.cloudOELayoutTable th {
+ 	padding: 5px 5px 5px 0;
+}
+
+/*******************************/
+.oneui.cloudOE .cloudOEEnvVars .dijitSelect .dijitButtonContents {
+	width:150px;
+}
+
+.oneui.cloudOE .dijitToolbar .dijitButton .dijitButtonNode {
+	background-color: transparent;
+}
+
+.cloudOEEnvVars .cloudOELayoutTable {
+	border-spacing: 0;
+}
+
+.cloudOEEnvVarsTypeNoteDiv {
+	margin: 20px 30px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 0.75em;
+}
+
+.cloudOEEnvVarsGrid td {
+	padding: 2px 7px !important;
+}
+
+/*
+ * MessageDialog
+ */
+
+.cloudOEMessageDialog {
+	width: 500px;
+}
+
+.cloudOEMessageDialogContentArea {
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+.cloudOECreateSpace {
+	max-width: 410px;
+	overflow: auto;
+}
+
+.cloudOEMessageDialogContentAreaContentDiv {
+	overflow: auto;
+}
+
+.cloudOEMessageDialogContentAreaContentDiv {
+	font-size: 16px;
+}
+
+.cloudOEMessageDialogContentAreaContentDiv .dijitTabContainer {
+	height: 290px;
+}
+
+.cloudOEMessageDialogContentAreaContentDiv p {
+	font-size: 16px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	line-height: 1em;
+}
+
+.cloudOEMessageDialogContentAreaContentDiv .dijitTabContainerTop-tabs,
+.cloudOEMessageDialogContentAreaContentDiv .dijitTab {
+	border-color: #b8c8d0;
+	color: inherit;
+	text-transform: uppercase;
+}
+
+.cloudOEMessageDialogContentAreaContentDiv .dijitTabListContainer-top .dijitTab.dijitHover{
+	border-top: 1px solid #b8c8d0;
+	padding-top: 9px;
+}
+
+.cloudOEMessageDialogContentAreaContentDiv .dijitTabListContainer-top .dijitTab.dijitTabChecked {
+	color: #29a9e1;
+	border-top: 1px solid #b8c8d0;
+	padding: 9px 5px 0;
+}
+ 
+.cloudOENegativeNumber {
+ 	color: red; /* TODO: Not in color palette */
+ }
+ 
+.cloudOEPositiveNumber {
+	color: green;  /* TODO: Not in color palette */
+}
+ 
+.cloudOEUnsavedChangeInlineMsg,
+.cloudOELoginValidationError {
+	color: #8781bd;  /* Not in palette, but recommended by UX */
+	font-style: italic;
+	margin-right: 10px;
+}
+
+/* 
+ * General Dialog
+ */
+.oneui .dijitDialog {
+	z-index: 2000;
+	border-radius: 12px;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+	border:0;
+	box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 5pt 3pt;
+}
+
+.oneui .dijitDialogTitleBar {
+	border:none;
+	text-align:center;
+	padding: 20px 0 15px 0;
+}
+
+.oneui .dijitDialogTitle {
+	font-size: 24px;
+ 	font-weight: 200;
+	text-transform: uppercase;
+}
+
+.oneui.cloudOE .dijitDialogPaneContent {
+	padding: 0;
+	overflow-x: hidden !important;
+}
+
+.oneui .dijitDialogPaneContentArea {
+	padding: 0;
+	margin: 0 100px 0 100px;
+}
+
+/* TODO: Seems like we need to do something different here depending on whether a widget (e.g., tab container to 
+ allow user to delete orphaned service or URL route) added to dialog or not. */
+.oneui .cloudOEMessageDialog .dijitDialogPaneContentArea {
+	margin: 0 0 10px 0;
+}
+
+.oneui .cloudOEMessageDialogSmallText {
+	font-size: 16px;
+	font-weight: 200;
+	padding-bottom: 30px;
+}
+
+.oneui .dijitDialogPaneActionBar {
+	border: none;
+	text-align: center;
+	padding-top: 25px;
+	margin-bottom: 27px;
+}
+
+/* TODO: Seems like we need to do something different here depending on whether a widget (e.g., tab container to 
+   allow user to delete orphaned service or URL route) added to dialog or not. */
+.oneui .cloudOEMessageDialog .dijitDialogPaneActionBar {
+	float: right;
+	margin: 0;
+	margin-top: -8px;
+	padding: 0;
+	line-height: 65px;
+}
+
+.oneui .dijitDialogPaneActionBar .cloudOEMessageDialogPaneActionClose .dijitButtonNode {
+	height: 35px;
+	width: 110px;
+	margin: 0;
+	padding: 0;
+}
+
+.oneui .cloudOEMessageDialog .cloudOEMessageDialogContentAreaInfo {
+	float: left; 
+	line-height: 65px;
+	font-size: 14px;
+	font-weight: 200;
+	margin-top: -8px;
+}
+
+.oneui .cloudOEMessageAreaTextCell {
+	padding-left: 35px;
+}
+
+.oneui .cloudOEMessageAreaText {
+	font-size: 18px;
+	font-weight: 200;
+	width: 100%;
+	color: black; /* TODO: Temporary while restyling for Beta 2. Body styling makes all text white by default, but want to patch to be 
+				able to read messages in the meantime. This will change as we restyle this part of the UI. */
+}
+
+.oneui .cloudOEMessageDialogContentArea .dijitContentPane {
+	padding: 25px 0 0 0;
+}
+
+.oneui .cloudOEMessageDialogContentArea .dijitTabContainer .dijitContentPane {
+	padding: 0 8px 0 8px;
+}
+
+.oneui .dijitDialogUnderlay {
+	background-color: rgba(0,0,0,.5);
+}
+
+.oneui.cloudOE .dijitDialogPaneContent .cloudOELayoutTable {
+	border-spacing: 0;
+}
+
+.cloudOEDialogPaneContentAreaHeader {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	margin: 10px auto 10px auto;
+}
+
+.cloudOEDialogPaneContentAreaHeaderIcon {
+	height:45px;
+	width:45px;
+	vertical-align: middle;
+	margin-right:4px;
+}
+ 
+.oneui.cloudOE .dijitDialogPaneContent label {
+	margin-top: 3px;
+	margin-bottom: 2px;
+	font-size: 16px;
+	font-weight: 200;
+}
+
+.oneui.cloudOE .dijitDialogPaneContent label {
+	display: block;
+}
+
+.oneui.cloudOE .dijitTextBox {
+	color: #555; /* cloudOEDarkBlue_foreground */
+	font-size: 16px;
+}
+
+.oneui.cloudOE .dijitTextBox .dijitInputField,
+.oneui.cloudOE .dijitSelect .dijitButtonContents {
+	color: #555; /* cloudOEDarkBlue_foreground */
+}
+
+.oneui.cloudOE .dijitTextBox .dijitInputField .dijitPlaceHolder {
+	color: #94a3ab;
+}
+
+.oneui.cloudOE .dijitDialogPaneContent .dijitSelect .dijitButtonText { 
+	font-size: 16px;
+	padding: 4px 0 5px 0;
+}
+
+/* NOTE: Was trying to scope this to .dijitDialogPaneContent, but was having trouble with that. This
+   maybe be what we want for all select menus anyway. */
+.oneui .dijitSelectMenu .dijitMenuItemLabel,
+.oneui .dijitMenuTable .dijitMenuItem {
+	color:#175275; /* cloudOEDarkBlue_foreground */
+	font-size: 16px;
+}
+
+.oneui.cloudOE .dijitDialogPaneContent .dijitSelect .dijitButtonContents {
+	width:400px;
+}
+
+/* NOTE: Needed otherwise select box height increases when validation is in error. */
+.oneui.cloudOE .dijitDialogPaneContent .dijitValidationInner {
+	width: 0;
+}
+
+.cloudOECreateAppDialog .runtimeButtonBar {
+	text-align:center;
+	margin-top:8px;
+}
+
+.cloudOECreateAppDialog .runtimeButtonBar .runtimeContainer {
+	display:inline-block;
+	width:100px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+.cloudOECreateAppDialog .runtimeButtonBar .runtime {
+	font-size: 14px;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	border-radius: 4px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* 
+ * Create App Dialog
+ */
+.cloudOECreateAppDialog .selectedRuntime {
+	background:#f2efeb;   /* cloudOELightGray */
+}
+
+.cloudOECreateAppDialog .runtimeButtonBar .separator {
+	display:inline-block;
+	height:100%;
+	width: 1px;
+	padding:0;
+	border-right:1px solid #144963; /* .cloudOEDarkBlue2 */
+	overflow:hidden;
+	margin:3px 4px 3px 3px;
+	vertical-align: middle;
+}
+
+.cloudOECreateAppDialog .appDescription,
+.cloudOECreateAppDialog .appDescriptionCompact {
+	width:100%;
+}
+
+.cloudOECreateAppDialog .appDescription {
+	min-height:50px;
+}
+
+/* 
+ * Create Service Instance Dialog
+ */
+ .cloudOECreateServiceDialog {
+    width: 625px;
+ }
+ 
+.cloudOECreateServiceDialogPlanDescriptionDiv {
+	font-size: 14px;
+	font-weight: 200;
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1.3em;
+	max-height: 2.6em;
+	
+	white-space: normal !important;
+	margin-bottom: 3px;
+}
+
+.cloudOECreateServiceDialog a {
+    text-decoration: underline;
+    color: #00aed1;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.cloudOECreateServiceDialog a:hover {
+  cursor: pointer;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+	.cloudOECreateServiceDialogDescriptionDiv {
+	  	display: -webkit-box;
+		-webkit-line-clamp: 2; /* number of lines to show */
+		-webkit-box-orient: vertical;
+	}
+}
+
+.oneui.cloudOE .cloudOEMessageMultiSelectMulti {
+	overflow: auto;
+}
+
+.cloudOEMessageMultiSelectMultiSelect {
+	margin: 0 60px;
+}
+
+.cloudOEMessageMultiSelect .dojoxCheckedMultiSelect {
+	display: block;
+}
+
+.cloudOEMessageMultiSelect .dojoxCheckedMultiSelectWrapper {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 15px;
+}
+
+.cloudOEMessageMultiSelect .dojoxCheckedMultiSelectWrapper.cloudOEMessageMultiSelectMulti {
+	background-color: white;
+	border: 1px solid #b8c8d0;
+	border-radius: 10px;
+}
+
+.cloudOEMessageMultiSelect .dojoxCheckedMultiSelectWrapper.cloudOEMessageMultiSelectSingle {
+	background-color: transparent;
+	border: none;
+	height: 20px;
+	overflow: hidden;
+}
+
+.cloudOEMessageMultiSelect .dojoxMultiSelectItem {
+	padding: 2px 0 2px 5px;
+}
+
+.cloudOEMessageMultiSelect .dojoxMultiSelectItem:hover {
+	cursor: pointer;
+	background: #ddf2f9;
+}
+
+.cloudOE .dijitInlineEditBoxDisplayModeHover {
+   border-style: dashed;
+   border-color: black; /* #769dc0;*/
+}
+
+.cloudOE .dijitInline .dijitTextBox {
+	border-style: dashed;
+	border-color: black;
+}
+
+.cloudOE .dijitInline .dijitTextBoxError, 
+.cloudOE .dijitInline .dijitTextBoxFocused.dijitTextBoxError .dijitButtonNode {
+	border-color: #cd321a !important;  /* TODO: Not in color palette */
+}
+
+textarea {
+	font-family: inherit;
+}
+
+.cloudOE .cloudOEAppDetailsDomainInlineEdit .dijitInline .dijitButton .dijitButtonNode {
+	/* reduces the size of the buttons */
+	margin-top: 10px;
+	min-width: 50px;
+}
+
+.cloudOE .cloudOEDomainTable  {
+	margin: 0;
+	border-spacing: 0;
+}
+
+.oneui.cloudOE .cloudOEDomainTable .dijitTextBox {
+	font-size: 14px;
+}
+
+/* Changes to app details for panel edit */
+.cloudOE .cloudOEAppDetailsDomainInlineEdit .dijitInline .dijitButton {
+	
+	/* Hide the buttons for the inline edit box */
+	display: none;
+}
+
+.cloudOE .cloudOEAppDetailsToolbarDivDomainTable .cloudOEIconEditField {
+	display:none;
+}
+
+.cloudOEPaneHeader.cloudOESpriteIcon_icon_edit {
+	vertical-align: top;
+} 
+
+.cloudOEDescriptionLabel {
+	font-weight: 700;
+	font-size: 12px;
+	color: #222;  /* TODO: Not in color palette */
+	margin: 0 0 5px 5px;
+}
+
+.cloudOEAppDetailsButtonDiv {
+	text-align: right;
+}
+
+/* end Changes to app details for panel edit */
+
+
+/* Service Metadata Editor */
+.cloudOEServiceOfferingMetadataEditor .cloudOELayoutTable td, 
+.cloudOEServiceOfferingMetadataEditor .cloudOELayoutTable th {
+  padding: 3px 5px 3px 5px; 
+}
+
+.oneui .cloudOEServiceOfferingMetadataEditorGrid .gridxCell {
+	vertical-align: top !important;
+}
+
+.cloudOEArrayColumnEditor {
+	margin-top: -2px;
+}
+
+.cloudOEArrayColumnEditorWithItems {
+	margin-top: -5px;
+}
+
+.dijitTooltipDialog:focus {
+	/* We are using oneUI highlighting so this creates a double focus, so we remove the browser default */
+	/*  Chrome will also apply highlighting to other elements such as DIV's used as modals. */
+   outline: 0;
+}
+
+.oneui .dijitTooltipAbove .dijitTooltipConnector {
+	left: 15px; /* Our UX designer thought default was too close to edge. */
+}
+
+.cloudOEHide {
+	display: none;
+}
+
+/* Overriding this to get rid of extra padding when used in our MessageArea widget. In addition,
+   want to set size to be the same as other icons used in MessageArea. */
+.oneui .idxSignIcon.dijitContentPaneLoading {
+	padding-left: 0 !important;
+	padding-top: 0 !important;
+	
+	width: 24px; 
+	height: 24px;  
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.oneuiMsgSuccess24 {
+	background-position: -79px -43px;
+}
+
+/* Refresher and Time Since */
+.cloudOERefresher {
+	padding-top: 8px;
+	min-width: 124px;
+}
+
+.oneui.cloudOE .cloudOERefresher .dijitButton {
+	background-image: none;
+	margin: 0;
+}
+
+.oneui.cloudOE .cloudOERefresher .dijitButtonNode {
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	background-image: none;
+	padding: 0;
+	text-transform: none;
+	min-width: 0;
+}
+
+.oneui.cloudOE .cloudOERefresher .dijitButtonContents {
+	padding: 0;
+}
+
+.oneui.cloudOE .cloudOERefresher .dijitHover .dijitButtonNode {
+	border: none;
+	background: transparent none;
+}
+
+.oneui.cloudOE .cloudOERefresher .dijitHover .dijitButtonText {
+	text-decoration: underline;
+}
+
+.oneui.cloudOE .cloudOERefresher .dijitButtonText {
+	padding-left: 1em;
+	text-shadow: none;
+	font-size: 12px;
+}
+
+.oneui.cloudOE .cloudOERefresher .cloudOERefresherButtonRight {
+	float: right;
+	margin-left: 5px;
+}
+
+.oneui.cloudOE .cloudOERefresher .cloudOERefresherButtonRight.dijitButton .dijitButtonNode {
+	padding: 0;
+	vertical-align: top;
+}
+
+.cloudOETimeSinceLabel {
+	min-width: 90px;
+	font-size: 0.75em;
+	font-weight: 400;
+	padding: 0.1em 0;
+}
+
+.cloudOETimeSinceLabelSameLine {
+	display: inline;
+	vertical-align: middle;
+}
+
+.cloudOETimeSinceLabelLeftSeparator {
+	padding-left: 0.3em;
+	margin-left: 5px;
+	display: inline;
+}
+
+.cloudOETimeSinceLabelRightSeparator {
+	display: table-cell;
+	float: left;
+	padding-right: 0.3em;
+	display: inline;
+}
+
+.cloudOEManage .cloudOERefresher .cloudOETimeSinceLabel .cloudOETimeSinceLabelTime {
+  	color: #00b299;
+}
+
+/* Breadcrumb */
+.cloudOEBreadcrumb {
+	height:35px;
+	line-height: 35px;
+	vertical-align: middle;
+	white-space: nowrap;
+	padding-left: 20px;
+	font-size: 16px;
+}
+
+.cloudOEBreadcrumb > div {
+	background: inherit;
+}
+
+.cloudOEBreadcrumbSeparator {
+	position: relative;
+	height: 1em;
+	padding: 0 0.4em;
+	vertical-align: bottom;	
+	white-space: nowrap;	
+}
+
+.cloudOEMobileSdkApiKeyArea {
+	border-bottom: 1px solid #b8c8d0;
+	display: inline-block;
+	float: right;
+	margin: 40px 40px 40px 10px;
+}
+
+.cloudOEMobileSdkApiKeyLabel {
+	font-size: 20px;
+	font-weight: 200;
+	letter-spacing: 0.10em;
+	padding-left: 20px;
+	width: 170px;
+	height: 35px;
+	display: inline;
+}
+
+.cloudOEMobileSdkApiKeyValue {
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	border: 1px solid #6da6bf;
+	background-color: #f2efeb;
+	height: 30px;
+	padding: 7px 14px 7px 14px;
+	margin-left: 5px;
+	display: inline;
+}
+
+.cloudOEMobileSdkButtonArea {
+	padding: 40px 55px;
+}
+
+.cloudOEMobileSdkButton {
+	margin: 20px 10px 20px 20px;
+	background-color: #175275;
+	border-radius: 10px;
+	display: inline-block;
+}
+
+.cloudOEMobileSdkButton:hover {
+	cursor: pointer;
+	background-color: #6da6bf;
+}
+
+.cloudOEMobileSdkButtonText {
+	width: 155px;
+	height: 50px;
+	float: left;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	line-height: 150%;
+	text-transform: uppercase;
+	color: white;
+	padding: 15px 5px 15px 20px;
+	display: inline;
+}
+
+.cloudOEMobileSdkButtonText_iOS {
+	/* This accounts for the Apple icon being a different width than the Android icon,
+	 * and the fact that we don't want "iOS" to be uppercased into "IOS".
+	 */ 
+	width: 147px;
+	padding-right: 9px;
+	text-transform: none;
+}
+
+.cloudOEMobileSdkButtonIcon {
+	height: 50px;
+	float: right;
+	padding: 15px 15px 15px 0;
+	display: inline;
+}
+
+.cloudOEMobileSdkButtonIcon_iOS {
+	/* This accounts for the Apple icon being a different width than the Android icon. */ 
+	padding-right: 20px;
+}
+
+.cloudOEMobileSdkDescription {
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0.025em;
+}
+
+/* ********************************************
+	Store/Catalog Tiling
+********************************************** */
+.cloudOEStorefront .cloudOETileListArea {
+	min-height: 170px;
+}
+
+.cloudOETileListItemMainDiv {
+	position: relative;
+	border: 8px solid #00bfe5;
+	background-color: #ffffff; 
+	margin: 0 auto 5px auto;
+}
+
+.cloudOEStorefrontBoilerplates .cloudOETileListItemMainDiv {
+    background-color: #3b4b54;  
+}
+
+.cloudOETileListItemSeparator {
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #dfe6eb;
+	display: inline-block;
+	position: relative;
+	left: 47px;
+	top: 21px;
+}
+
+.cloudOETileListItem .cloudOETileListItemProviderLabel {
+	font-weight: 700; 
+}
+
+.cloudOETileListItemBadge_ibm_created .cloudOETileListItemMainDiv {
+	border-color: #00aed1;
+}
+
+.cloudOETileListItemBadge_ibm_created .cloudOETileListItemProviderLabel {
+	color: #00aed1;
+}
+
+.selection-category .cloudOETileListItem.cloudOETileListItemBadge_ibm_created .button {
+	background-color: #00aed1;
+}
+
+.selection-category .cloudOETileListItem .button {
+	/* Make learn more button text dark */
+	color: #1b252d;
+	font-weight: 700;
+}
+
+.selection-category .cloudOETileListItem span {
+	margin-bottom: 0px;
+}
+
+.cloudOETileListItemBadge_ibm_certified .cloudOETileListItemMainDiv {
+	border-color: #ffd801;
+}
+
+.cloudOETileListItemBadge_ibm_certified .cloudOETileListItemProviderLabel {
+	color: #ffd801;	
+}
+
+.selection-category .cloudOETileListItem.cloudOETileListItemBadge_ibm_certified .button {
+	background-color: #ffd801;
+}
+
+.cloudOETileListItemBadge_ibm_community .cloudOETileListItemMainDiv {
+	border-color: #dfe6eb;
+}
+
+.selection-category .cloudOETileListItem.cloudOETileListItemBadge_ibm_community .button {
+	background-color: #dfe6eb;
+}
+
+.cloudOETileListItemBadge_ibm_community .cloudOETileListItemProviderLabel {
+	color: #dfe6eb;
+}
+
+.cloudOEStorefrontFilterBar {
+	margin: 20px 0 0;
+}
+
+.selection-category .cloudOEStorefrontFilterBar span {
+	display: inline;
+	margin-right: 20px;
+}
+
+.selection-category ul li:hover .cloudOETileListItem .button {
+	display: inline-block;
+}
+
+.selection-category .cloudOETileListItem:hover .button {
+	display: inline-block;
+}
+
+.selection-category .cloudOETileListItem:hover .cloudOETileListItemProviderLabel {
+	display: none;
+}
+
+.cloudOETileListItemMainDiv32,
+.cloudOETileListItemMainDiv35,
+.cloudOETileListItemMainDiv40 {
+	border-width: 3px;
+}
+
+.cloudOETileListItemMainDiv32 {
+	height: 32px; 
+	width: 32px; 
+}
+
+.cloudOETileListItemMainDiv35 {
+	height: 35px; 
+	width: 35px; 
+}
+
+.cloudOETileListItemMainDiv40 {
+	height: 40px; 
+	width: 40px; 
+}
+
+.cloudOETileListItemMainDiv72 {
+	height: 72px; 
+	width: 72px; 
+	border-width: 6px;
+}
+
+.cloudOETileListItemMainDiv100 {
+	height: 100px; 
+	width: 100px; 
+}
+
+.cloudOE .cloudOETileListItemMainDiv.cloudOETileListItemMainDiv260 {
+	width: 260px;
+	height: 100px;
+	
+	/* TODO: TileListItem's should really be set up to be without border or radius by default to avoid this */
+	border: none;
+	-webkit-border-radius: 0%;
+	-moz-border-radius: 0%;
+	border-radius: 0%; 
+}
+
+/* Include this for when scroller not in place (e.g., < 5 boilerplates) */
+.cloudOEStorefrontBoilerplates .cloudOETileListArea {
+	min-height: 135px;
+}
+
+.cloudOEStorefrontBoilerplates .cloudOETileListAreaScroller {
+	min-height: 260px;
+}
+
+.selection-category .cloudOETileListArea ul li {
+	height: 180px;
+	padding-bottom: 10px;
+}
+
+.selection-category h1:after {
+	margin-left: 10px;
+}
+
+/* Include this for when scroller not in place (e.g., < 5 boilerplates) */
+.cloudOEStorefrontBoilerplates.selection-category ul li {
+	width: 260px;
+	height: 100px;
+}
+
+.cloudOE .cloudOETileListItemMainDiv {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.cloudOETileListItemHexagon .cloudOETileListItemMainDiv {
+	border: none;
+	margin-bottom: 12px;
+}
+
+.cloudOETileListItem.cloudOETileListItemHexagon {
+	list-style: none;
+}
+
+.hex {
+	margin: 0 auto;
+	position: relative;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: #ffffff;
+}
+.hex32 {
+	height: 33px;
+    width: 20px;
+}
+.hex35 {
+	height: 36px;
+	width: 20px;
+}
+.hex40 {
+	height: 45px;
+	width: 28px;
+}
+.hex72 {
+	height: 73px;
+    width: 40px;
+}
+.hex100 {
+	height: 109px;
+	width: 60px;
+}
+
+/* Setting Borders for Hexagons */
+
+/* ibm_certified */
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex32,
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex35,
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex40 {
+	border-top: 3px solid #ffd801;
+	border-bottom: 3px solid #ffd801;
+}
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex32:before,
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex35:before,
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex40:before {
+	border-top: 3px solid #ffd801;
+	border-left: 3px solid #ffd801;
+}
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex32:after,
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex35:after,
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex40:after {
+	border-bottom: 3px solid #ffd801;
+	border-right: 3px solid #ffd801;
+}
+
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex72,
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex100 {
+	border-top: 5px solid #ffd801;
+	border-bottom: 5px solid #ffd801;
+}
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex72:before,
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex100:before {
+	border-top: 5px solid #ffd801;
+	border-left: 5px solid #ffd801;
+}
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex72:after,
+.cloudOETileListItemBadge_ibm_certified.cloudOETileListItemHexagon .hex100:after {
+	border-right: 5px solid #ffd801;
+	border-bottom: 5px solid #ffd801;
+}
+
+/* ibm_created */
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex32,
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex35,
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex40 {
+	border-top: 3px solid #00aed1;
+	border-bottom: 3px solid #00aed1;
+}
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex32:before,
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex35:before,
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex40:before {
+	border-top: 3px solid #00aed1;
+	border-left: 3px solid #00aed1;
+}
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex32:after,
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex35:after,
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex40:after {
+	border-right: 3px solid #00aed1;
+	border-bottom: 3px solid #00aed1;
+}
+
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex72,
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex100 {
+	border-top: 5px solid #00aed1;
+	border-bottom: 5px solid #00aed1;
+}
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex72:before,
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex100:before {
+	border-top: 5px solid #00aed1;
+	border-left: 5px solid #00aed1;
+}
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex72:after,
+.cloudOETileListItemBadge_ibm_created.cloudOETileListItemHexagon .hex100:after {
+	border-right: 5px solid #00aed1;
+	border-bottom: 5px solid #00aed1;
+}
+
+/* ibm_community */
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex32,
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex35,
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex40 {
+	border-top: 3px solid #dfe6eb;
+	border-bottom: 3px solid #dfe6eb;
+}
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex32:before,
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex35:before,
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex40:before {
+	border-top: 3px solid #dfe6eb;
+	border-left: 3px solid #dfe6eb;
+}
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex32:after,
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex35:after,
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex40:after {
+	border-right: 3px solid #dfe6eb;
+	border-bottom: 3px solid #dfe6eb;
+}
+
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex72,
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex100 {
+	border-top: 5px solid #dfe6eb;
+	border-bottom: 5px solid #dfe6eb;
+}
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex72:before,
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex100:before {
+	border-top: 5px solid #dfe6eb;
+	border-left: 5px solid #dfe6eb;
+}
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex72:after,
+.cloudOETileListItemBadge_ibm_community.cloudOETileListItemHexagon .hex100:after{
+	border-right: 5px solid #dfe6eb;
+	border-bottom: 5px solid #dfe6eb;
+}
+
+/* dashedBorder */
+.dashedBorder.cloudOETileListItemHexagon .hex35 {
+	border-top: 2px dashed #dfe6eb;
+	border-bottom: 2px dashed #dfe6eb;
+	background: transparent;
+	height: 37px;
+	-webkit-backface-visibility: hidden; /* this is to fix the skew issue with Safari */
+}
+.dashedBorder.cloudOETileListItemHexagon .hex35:before {
+	border-top: 2px dashed #dfe6eb;
+	border-left: 2px dashed #dfe6eb;
+	background: transparent;
+	height:19px;
+    width:19px;
+    top:6px;
+    left:-11px;
+    -webkit-backface-visibility: hidden; /* this is to fix the skew issue with Safari */
+}
+.dashedBorder.cloudOETileListItemHexagon .hex35:after{
+	border-right: 2px dashed #dfe6eb;
+	border-bottom: 2px dashed #dfe6eb;
+	background: transparent;
+	height:19px;
+    width:19px;
+    top:6px;
+    right:-11px;
+    -webkit-backface-visibility: hidden; /* this is to fix the skew issue with Safari */
+}
+
+.hex:before {
+    content:"";
+    position:absolute;
+    background-color: #ffffff;
+    /* skew(-15deg, -15deg) => matrix(1, tan(-15deg), tan(-15deg), 1, 0, 0) */
+    transform: rotate(-45deg) matrix(1, -0.26794919243, -0.26794919243, 1, 0, 0);
+    -moz-transform: rotate(-45deg) matrix(1, -0.26794919243, -0.26794919243, 1, 0, 0);
+    -webkit-transform: rotate(-45deg) matrix(1, -0.26794919243, -0.26794919243, 1, 0, 0);
+}
+.hex32:before {
+	height:16px;
+    width:16px;
+    top:4px;
+    left:-10px;
+}
+.hex35:before {
+	height:17px;
+    width:17px;
+    top:5px;
+    left:-10px;
+}
+.hex40:before {
+	height:22px;
+    width:22px;
+    top:7px;
+    left:-13px;
+}
+.hex72:before {
+	height:36px;
+    width:36px;
+    top:11px;
+    left:-21px;
+}
+.hex100:before {
+	height:56px;
+    width:56px;
+    top:19px;
+    left:-30px;
+}
+
+.hex:after {
+    content:"";
+    position:absolute;
+    background-color: #ffffff;
+    /* skew(-15deg, -15deg) => matrix(1, tan(-15deg), tan(-15deg), 1, 0, 0) */
+    transform: rotate(-45deg) matrix(1, -0.26794919243, -0.26794919243, 1, 0, 0);
+    -moz-transform: rotate(-45deg) matrix(1, -0.26794919243, -0.26794919243, 1, 0, 0);
+    -webkit-transform: rotate(-45deg) matrix(1, -0.26794919243, -0.26794919243, 1, 0, 0);
+}
+.hex32:after {
+	height:16px;
+    width:16px;
+    bottom:4px;
+    right:-10px;
+}
+.hex35:after {
+	height:17px;
+    width:17px;
+    bottom:5px;
+    right:-10px;
+}
+.hex40:after {
+	height:22px;
+    width:22px;
+    bottom:7px;
+    right:-13px;
+}
+.hex72:after {
+	height:36px;
+    width:36px;
+    bottom: 11px;
+    right: -21px;
+}
+.hex100:after {
+	height:56px;
+    width:56px;
+    bottom:19px;
+    right:-30px;
+}
+
+.cloudOE .cloudOETileListItem .cloudOETileListItemMainDiv img {
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	
+	-webkit-border-radius: 0%;
+	-moz-border-radius: 0%;
+	border-radius: 0%;
+}
+
+
+/* These correspond to the size of the image within said tile */
+.cloudOE .cloudOETileListItemMainDiv32 img,
+.cloudOE .cloudOETileListItemMainDiv35 img,
+.cloudOE .cloudOETileListItemMainDiv40 img {
+	width: 24px;
+	height: 24px;
+	margin-top: -12px;
+	margin-left: -12px;
+}
+
+.cloudOE .cloudOETileListItemMainDiv72 img {
+	width: 50px;
+	height: 50px;
+	margin-top: -25px;
+	margin-left: -25px;
+}
+
+.cloudOE .cloudOETileListItemMainDiv100 img {
+	width: 64px;
+	height: 64px;
+	margin-top: -32px;
+	margin-left: -32px;
+}
+
+.cloudOE .cloudOETileListItem .cloudOETileListItemMainDiv260 img {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+/************************************************************************************/
+/************************************************************************************/
+/* TODO: bluemix.css additions and overrides									*/
+/************************************************************************************/
+/************************************************************************************/
+
+html {
+	width:100%;
+	height:100%;
+	background-color: #3b4b54;
+	min-height: 1024px;
+}
+
+body {
+  background-color: inherit; /* originally #3b4b54, but I moved the overall background to the html element */
+}
+
+.l-body {
+	background-color: inherit;
+}
+
+/* TODO: l-content-with-right-lane is used in prototype, but we're not doing a 
+   summary area for Feb, so we need a slightly different set-up*/
+.l-content-with-right-lane {
+  margin-right: 150px !important; /* Originally 325px */
+  height: auto !important; /* Value from bluemix.css is 1500, but we can't really hard-code the height here as that won't work if we have a lot of runtimes/services. */
+  padding-right: 0 !important; /* Originally set to 40px */
+  margin-left: 150px;
+}
+
+.selection-category ul li img {
+	margin-bottom: 0 !important;
+}
+
+hr {
+	border-style: none none solid;
+	border-color: rgba(122, 137, 145, 0.3);
+}
+
+.gaugeLabel {
+	text-align: center;
+	padding-top: 10px;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.i-dashboard-gauge {
+	margin: 0 auto;
+	position: relative;
+}
+
+.i-dashboard-gauge div.radial {
+	left: 1px;
+	top: 1px;
+}
+
+.progressBarName {
+	text-transform: uppercase;
+}
+
+.sectionHeader {
+	padding-bottom: 30px;
+}
+
+.sectionName {
+	float: left;
+	padding-right: 20px
+}
+
+.sectionHeader hr {
+	position: relative;
+	top: 8px
+}
+
+/* MAR: All of the pseudo-element :after rules for cards' health need to be removed
+from the stylesheet. The health string is already NLS enabled. */
+#app-container .dashboardCard.tile.app .health.grey:after,
+#app-container .dashboardCard.tile.app .health.red:after,
+#app-container .dashboardCard.tile.app .health.yellow:after,
+#app-container .dashboardCard.tile.app .health.green:after {
+	content: "";
+}
+
+/* MAR: Task 93878 - Increase click area of settings div on Dashboard cards. */
+.tile.app .settings {
+	padding: 6px;
+}
+
+/* MAR: Task 93878 - Add hover background to dashboard card settings icon. */
+.cardSettingsIcon:hover {
+	background: url('dt/imgs/sprite_service.png') no-repeat -34px -15px;
+}
+
+/* MAR: The settings menu on Dashboard app/service cards is set to display:none
+ in the prototype, but I cannot toggle show/hide programmatically in our code using
+ dom-style.set. Therefore I am toggling the cloudOEHide class instead and clobbering
+ the prototype's display:none rule on this element.
+
+ The below rules override this selector in bluemix.css: .tile.app .settings-menu
+ I would prefer the display:none to be removed from that rule.
+ */
+.dashboardCard.tile.app .settings-menu {
+	display: block;
+}
+/* MAR: Allow the class toggling on app tiles settings menu to work. */
+.dashboardCard.tile.app .settings-menu.cloudOEHide {
+	display: none;
+}
+
+/* MAR: Center the main icon for service cards. */
+.serviceCard .appCardMainIcon {
+	margin: 0 auto;
+}
+
+/* MAR: Center the route below the app name. */
+.tile.app .tile-route {
+	text-align: center;
+}
+
+/* MAR: Cannot show/hide runtime area programmatically using domStyle.set so
+ clobber the display rule on the runtime. */
+.dashboardCard.tile.app .runtime.cloudOEHide {
+	display: none;
+}
+
+/* MAR: Get rid of the round border on service cards' bound apps. */
+.bindings.service_bindings .cloudOETileListItemMainDiv {
+	border: none;
+}
+
+/* MAR: Make bound apps appear in a row rather than stacked vertically. */
+.bindings.service_bindings .cloudOETileListItem {
+	display: table-cell;
+	padding: 0 4px;
+}
+
+.dashboardCard .docs {
+	margin-top: 30px;
+	display: none;
+}
+
+.dashboardCard.showDocs:hover .docs {
+	display: block;
+	cursor: pointer;
+}
+
+/* MAR: Stop app image from shrinking and repositioning. */
+.bindings.service_bindings .cloudOETileListItem .cloudOETileListItemMainDiv img {
+	width: 100%;
+	height: 100%;
+	margin-top: 0;
+	margin-left: 0;
+	position: static;
+	left: 0;
+	top: 0;
+}
+
+/* MAR: Override the margin so that there isn't an overly large gap when a card
+does not have service binding hexagons, which require more room. */
+.bindings.no-bindings.with-runtime ul,
+.serviceCard .bindings ul {
+	margin-top: 16px;
+}
+
+/* MAR: Override card's margin when it has no bindings. */
+.tile.app .bindings.no-bindings.no-runtime {
+	display: none;
+}
+
+/* MAR: We shouldn't use margin-bottom because service cards have no health, so
+that adds unneeded margin.*/
+.tile.app .bindings {
+	margin-bottom: 0px !important;
+}
+
+/* MAR: Put the margin on the top of the health div instead. */
+.tile.app .health {
+	margin-top: 20px;
+}
+
+/* MAR: Names under bound apps on Dashboard Service Cards */
+.dashboardCard.serviceCard .bindings .tileName  {
+	font-size: 0.65em;
+	display: block;
+	max-width: 45px;
+	text-align: center;
+}
+
+.dashboardCard.serviceCard .cloudOETileListAreaLabel {
+	font-size: 0.7em;
+	line-height: 34px;
+	margin-right: 0.1em;
+	display: table-cell;
+	vertical-align: top;
+	position: relative;
+	left: -10px;
+}
+
+.dashboardCard.serviceCard .cloudOETileListArea ul {
+	display: table-cell;
+}
+
+.serviceCard.tile.app .bindings.no-runtime {
+	margin-top: 10px;
+}
+
+/* MAR: Add a grey border between runtime and services. */
+.dashboardCard .bindings .separator,
+.tile.summary .bindings .separator {
+	height: 41px;
+	border-left: 1px solid #d3d3d3;
+	margin-left: 7px;
+	margin-right: 12px;
+}
+
+.dashboardCard .bindings.no-runtime .separator,
+.dashboardCard .bindings.no-bindings .separator,
+.tile.summary .bindings.no-runtime .separator,
+.tile.summary .bindings.no-bindings .separator {
+	display: none;
+}
+
+/* Have to specify the size of the images on the dashboard cards so that masonry will
+   layout the cards correctly. Otherwise masonry may layout before the images have loaded
+   and an improper height will be used. */
+.appCardMainIcon {
+	height: 64px; 
+	width: 64px;
+}
+
+.serviceCard .cardSettingsIcon {	
+	float:right;
+}
+
+.cardSettingsIcon {
+	height: 20px;
+	width: 20px;
+	background: url('dt/imgs/sprite_ace.png') no-repeat -66px -100px;
+	border: 0px;
+}
+
+.cardRuntimeIcon {
+	height: 32px;
+	width: 32px;
+}
+
+.plus-sign {
+	color: #ffffff;
+	height: 75px;
+	width: 75px;
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 75px;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: "Helvetica", sans-serif;
+}
+
+header .profile .profile-wrapper.profile-wrapperDefault {
+  border: 2px solid #3b4b54;
+}
+
+header .profile:hover .profile-wrapper.profile-wrapperDefault {
+  border: 2px solid #1b252d;
+}
+
+header .profile .profile-wrapper img {
+	padding-top: 11px;
+	border-radius: 0px;
+}
+
+.logout a:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+/*
+ * JTB: New Bluemix UI oneui/dijit overrides for Dijit.Dialog
+ */
+.oneui .bluemixDialog.dijitDialog {
+	background-color: #ffffff !important;
+	color: #3b4b54 !important;
+	border-radius: 3px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.oneui .bluemixDialog.dijitDialog .dijitDialogPaneContent {
+	overflow: hidden;
+	width:100%;
+}
+
+.bluemixDialog .cloudOEMessageDialogContentAreaContentDiv .dijitTab,
+.bluemixDialog .cloudOEMessageDialogContentAreaContentDiv .dijitContentPane {
+	background-color: #ffffff;
+}
+
+.oneui .bluemixDialog.dijitDialog .dijitButton {
+	margin-right: 0 !important;
+}
+
+.oneui .bluemixDialog.dijitDialog .button {
+	padding: 0;
+}
+
+.oneui .bluemixDialog.dijitDialog .dijitButtonNode {
+	background-color: #00b299;
+	border-radius: 4px;
+	/*padding: 5px;*/
+}
+
+.oneui .bluemixDialog.dijitDialog .dijitButtonNode:hover {
+  background-color: #01cdb0;
+}
+
+.oneui .bluemixDialog.dijitDialog .dialog-btn-secondary .dijitButtonNode {
+	background-color: #DFE6EB;
+	color: #3B4B54;
+}
+
+.oneui .bluemixDialog.dijitDialog .dialog-btn-secondary .dijitButtonNode:hover {
+	background-color: #e9eff2;
+}
+
+.oneui .bluemixDialog.dijitDialog .dijitDialogCloseIcon {
+	display: inline !important;
+	float: right;
+	position: relative;
+	right: -15px;
+	top: -15px;
+}
+
+.oneui .bluemixDialog.dijitDialog .dijitDialogPaneActionBar {
+	text-align: right;
+	margin: 10px 25px 10px 0;
+	padding: 0;
+}
+
+.oneui .bluemixDialog.dijitDialog.cloudOEMessageDialog .dijitDialogPaneActionBar {
+	margin-right: 0;
+}
+
+.bluemixDialog.dijitDialog .dijitDialogTitleBar {
+	padding: 15px 0 !important;
+    /*text-align: right !important;*/
+}
+
+/* Should not have to do this if Dialog.closable is true */
+.bluemixDialog.dijitDialog .closeText {
+	display: inline !important;
+	position: relative !important;
+	color: #94a3ab;
+	font-size:1.8em;
+	font-weight:400;
+}
+
+.bluemixDialog.dijitDialog.hideCloseText .closeText {
+	display: none !important;
+}
+
+.oneui .bluemixDialog .gridxBodyEmpty {
+	border: medium none;
+}
+
+.oneui .bluemixDialog .gridxAlternatingRows .gridxRow, .oneui .bluemixDialog .gridxAlternatingRows .gridxRowTable {
+	background-color: inherit;
+}
+
+.oneui .bluemixDialog .gridxRowOdd .gridxRowTable {
+	background-color: rgba(227, 238, 246, 0.5);
+}
+
+.oneui .bluemixDialog .dijitDialogTitleBar {
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.oneui .bluemixDialog.hasTitle .dijitDialogTitleBar {
+	border-bottom: 1px solid #94A3AB;
+}
+
+.oneui .bluemixDialog .dijitDialogTitle {
+	color: #94A3AB;
+	text-transform: inherit;
+}
+
+.oneui .bluemixDialog .gridxHeaderRow .gridxCell {
+	color: #3B4B54;
+	font-family: "HelveticaNeueBold","HelveticaNeue-Bold","Helvetica Neue Bold","HelveticaNeue","Helvetica Neue",'TeXGyreHerosBold',"Helvetica","Tahoma","Geneva","Arial",sans-serif;
+	font-size: 0.75em;
+	font-stretch: normal;
+	font-weight: 600;
+}
+
+.oneui .bluemixDialog .gridxMain .gridxCell {
+	font-size: 0.75em;
+	font-weight: 300;
+}
+
+.oneui .bluemixDialog .gridxHeader .gridxHeaderRow {
+	border-bottom: 1px solid #000000;
+}
+
+.oneui .bluemixDialog .gridxMain .gridxRowHeaderCell {
+	vertical-align: middle;
+}
+
+.oneui .bluemixDialog .dijitRadio.dijitRadioChecked {
+	background: url("dt/imgs/sprite_service.png") no-repeat scroll -66px -166px rgba(0, 0, 0, 0);
+	height: 16px;
+	width: 16px;
+}
+
+.oneui .bluemixDialog .dijitRadio {
+	background: url("dt/imgs/sprite_service.png") no-repeat scroll -66px -147px rgba(0, 0, 0, 0);
+	height: 16px;
+	width: 16px;
+}
+
+.oneui .bluemixDialog .gridx div.cloudOETextWithEllipsis {
+	min-height: 1.1em;
+}
+
+.oneui .bluemixDialog .cloudOEMessageAreaText {
+	font-size: 20px;
+	line-height: 24px;
+	color: #94A3AB;
+}
+
+.oneui .bluemixDialog .cloudOEMessageArea {
+	border-bottom: 1px solid #94A3AB;
+	padding-bottom: 10px;
+}
+
+.oneui .bluemixDialog .cloudOEMessageDialogContentAreaContentDiv p {
+	font-size: inherit;
+	color: inherit;
+}
+
+.oneui .bluemixDialog.cloudOEMessageDialog .dijitDialogPaneContentArea {
+	color: #3B4B54;
+	font-size: 13px;
+}
+
+/*
+ * JTB: End new Bluemix UI oneui/dijit overrides for Dijit.Dialog
+ */
+
+.BannerOrgLabel, .cloudOESpaceLabel {
+	margin-right: 10px;
+	cursor: pointer;
+	text-transform: none;
+}
+
+.BannerOrgName, .cloudOESpaceLabel .cloudOESpaceName.current {
+	display: inline-block;
+	max-width: 220px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	vertical-align: bottom;
+}
+
+.cloudOESpaceLabel {
+	text-align: center;
+}
+
+.cloudOESpaceLabel .cloudOESpaceName.current {
+	width: 120px;
+	margin-right: 5px;
+}
+
+.BannerOrgLabel:hover {
+	color: #ffffff;
+}
+
+body header nav ul li {
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-right: 40px;
+}
+
+.logout {
+	cursor: pointer;
+}
+
+body header {
+	padding-left: 0px;
+}
+
+.ProductBanner {
+	display: inline-block;
+	float: left;
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 7px solid #b3b3b3;
+	cursor: pointer;
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.cloudOESpaceLabel .arrow-down {
+	border-top: 7px solid white;
+}
+
+.BannerOrgLabel:hover .arrow-down {
+	border-top-color: #00b299;
+}
+
+/*
+ * Duplicates of bluemix.css
+ */
+.settings-menu {
+  width: 250px;
+  background-color: #ffffff;
+  border: 1px solid #dcd9df;
+  position: absolute;
+  z-index: 150;
+  right: 119px;
+  top: 52px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10pt -2pt rgba(0, 0, 0, 0.5);
+  color: #1b252d;
+}
+
+.settings-menu:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 10px 6px;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -6px;
+  left: 225px;
+}
+
+.settings-menu:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 10px 6px;
+  border-color: #dcd9df transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  top: -6px;
+  left: 225px;
+}
+
+.cloudOESpaceLabel .settings-menu:after {
+  left: 139px;
+}
+
+.cloudOESpaceLabel .settings-menu:before {
+  left: 139px;
+}
+
+.settings-menu ul {
+  border-bottom: 1px solid #dcd9df;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 0.75em;
+}
+
+.settings-menu ul:last-child {
+  border-bottom: 0px solid #dcd9df;
+}
+
+.settings-menu ul li {
+  padding-left: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-left: 5px solid #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.3em;
+  /* cloudOE addition: show pointer cursor when over menu items */
+  cursor: pointer;
+}
+
+.settings-menu.appGearMenu ul li,
+.cloudOESummaryTile .settings-menu ul li {
+	font-size: 1.2em;
+}
+
+.settings-menu ul li:hover {
+  border-left: 5px solid #00b299;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #f2f5f7;
+}
+
+.space-selection .settings-menu ul li {
+	font-size: 1.2em;
+}
+
+.BannerOrgLabel .settings-menu {
+	width: 250px;
+	right: 119px;
+	top: 52px;
+}
+
+.cloudOESpaceLabel .settings-menu {
+	width: 175px;
+	left: 20px;
+	top: 40px;
+	text-align: left;
+}
+
+.BannerOrgLabel .settings-menu ul li {
+	text-transform: none;
+	color: #1b252d;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	display: block;
+	margin-right: 5px;
+}
+
+.BannerOrgLabel .settings-menu:after {
+	border-width: 0 10px 6px;
+	top: -6px;
+	left: 227px;
+}
+
+.BannerOrgLabel .settings-menu:before {
+	border-width: 0 10px 6px;
+	top: -6px;
+	left: 227px;
+}
+
+.BannerOrgLabel .settings-menu ul:first-child {
+	margin-top: 10px;
+}
+
+.BannerOrgLabel .settings-menu ul:first-child li:last-child {
+	margin-bottom: 10px;
+}
+
+.BannerOrgLabel .settings-menu ul:last-child li,
+.space-selection .settings-menu ul:last-child li {
+	font-weight: 600;
+	text-align: center;
+	padding-left: 0;
+}
+
+/*
+ * bluemix.css overrides for Notification.
+ */
+
+.cloudOE .notification > p {
+    color: #FFFFFF;
+}
+
+.cloudOE .notification > p, .cloudOE .notification > .more > p {
+  font-size: 0.75em;
+  line-height: 16px;
+  margin-bottom: 15px;
+}
+
+.cloudOE .notification ol li {
+  font-size: 12px;
+}
+
+.cloudOE .notification .title,
+.cloudOE .notification .description {
+	cursor: pointer;
+}
+
+.cloudOE .notification.opened .description,
+.cloudOE .notification .more {
+	cursor: default;
+}
+
+.cloudOE .notification .more.extended {
+	display: block;
+}
+
+.cloudOE .notification code {
+  width: auto;
+  font-size: 91%;
+  overflow-x: hidden;
+  max-height: 120px;
+}
+
+.cloudOE .notification ol li p {
+  font-size: inherit !important;
+}
+
+.cloudOE .notification ol li:before {
+  font-size: 1.125em;
+}
+
+.cloudOE .notification pre {
+  background-color: inherit;
+}
+
+.cloudOE .notification h3 {
+    word-wrap: break-word;
+}
+
+.cloudOE .notification.teal h3:before {
+  background: url(dt/imgs/sprite_ace.png) no-repeat -65px -8px;
+  height: 23px;
+  width: 23px;
+}
+
+.cloudOE .notification.red h3:before {
+  background: url(dt/imgs/sprite_ace.png) no-repeat -66px -32px;
+  height: 23px;
+  width: 23px;
+}
+
+.cloudOE .notification > .more > p.lastp {
+  font-size: 0.6875em;
+  line-height: 1.5em;
+  margin-bottom: 8px;
+}
+
+/* App Details */
+/* Copied directly from cloudOEBootstrap.css */
+.button-text-bold {
+  font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 600;
+  font-stretch: normal;
+  font-size: 0.875em;
+}
+
+.tile-background {
+  margin: 10px;
+  background-color: #ffffff;
+  color: #3b4b54;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.tile.has-controls {
+  padding-right: 70px;
+}
+.tile-segmented {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+}
+
+.detailsRuntimeSection .tile-segmented {
+	width: 100%;
+}
+
+.tile-segment {
+  height: 100%;
+  padding: 30px 15px 30px 15px;
+  display: table-cell;
+  vertical-align: top;
+}
+
+.detailsRuntimeSection .tile-segment {
+	vertical-align: middle
+}
+
+.tile-segment.icon {
+  width: 72px;
+}
+.tile-segment:first-child {
+  padding-left: 25px;
+}
+.tile-segment:last-child {
+  padding-right: 30px;
+}
+.tile-segment.bordered {
+  border-right: 1px solid #dfe6eb;
+}
+.tile-segment.bordered:last-child {
+  border-right: none;
+}
+.tile-segment > h2,
+.tile-segment > h3,
+.tile-segment > h4 {
+  display: inline-block;
+}
+.tile-header .title {
+  font-size: 1.25em;
+}
+.tile-icon {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+.tile-info {
+  display: inline-block;
+}
+.tile-side-controls {
+  width: 50px;
+  height: 100%;
+  border-left: 1px solid #dfe6eb;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.tile-side-controls > ul {
+  width: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.btn {
+  font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 600;
+  font-stretch: normal;
+  font-size: 0.875em;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.btn-primary {
+  color: #ffffff;
+  background-color: #00b299;
+}
+.btn-primary:hover {
+  background-color: #01cdb0;
+}
+.btn-secondary {
+  color: #3b4b54;
+  background-color: #dfe6eb;
+}
+.btn-secondary:hover {
+  background-color: #e9eff2;
+}
+.btn-tertiary {
+  color: #ffffff;
+  background-color: #00849e;
+}
+.btn-tertiary:hover {
+  background-color: #0095b2;
+}
+
+/* End copy of cloudOEBootstrap.css */
+
+.tile-header {
+	display: inline-block;
+	margin-right: 10px;
+	font-weight: 300;
+  	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.5em;
+}
+
+.tile-route {
+	text-decoration: underline;
+	color: #00aed1;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 0.75em;
+	font-style: italic;
+}
+
+.tile-description {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 0.75em;
+	margin-top: 10px;
+	line-height: 15px;
+}
+
+.tile-runtimeUsage {
+	font-weight: 300;
+    font-size: 0.75em;
+    margin-top: 10px;
+    float: right;
+    color: #00aed1;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.tile.tile-background.has-controls {
+	position: relative;
+}
+
+/* App Details */
+
+nav.contextual-nav .app-name {
+	background-color: #26343f;
+	width: 100%;
+	padding: 15px 5px 18px 5px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	display: block;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #00b299;
+	border-bottom: 1px solid rgba(122, 137, 145, 0.3);
+}
+
+.cloudOE .nav-category .name .icon {
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 7px 0px 5px 10px;
+}
+
+.cloudOE .nav-category .name .icon.i-nav-overview-grey,
+.cloudOE .nav-category .name .icon.i-nav-overview-white {
+	margin-top: 10px;	
+}
+
+.contextual-nav > .inner > .nav-category > .name {
+	text-transform: uppercase;
+}
+
+.spaceDiv {
+    margin-top: 15px;
+	
+    text-align: center;
+}
+
+.spaceLabel {
+    font-weight: 600;
+	
+}
+
+.appGearMenu {
+	left: -211px;
+	cursor: pointer;
+}
+
+.detailsMobileSection {
+	margin-top: 33px;
+}
+
+.detailsRuntimeSection {
+	margin-top: 30px;
+}
+
+.detailsServiceSection {
+	margin-top: 30px;
+}
+
+/* With current length of first sentence on this panel, get weird text wrapping without this. */
+.detailsServiceSection .empty-app {
+	width: auto;
+}
+
+.detailsServiceSection .create-appContainer {
+	height: 75px;
+	background-color: transparent;
+	display: table;
+}
+
+.detailsServiceSection .create-appContainer .create-app {
+	width: 100%;
+}
+
+.detailsServiceSection .create-appContainer .create-app:first-child {
+	margin-bottom: 12px;
+}
+
+.tile.summary .bindings {
+	display: table;
+}
+
+.tile.summary .bindings.with-runtime {
+	margin-bottom: 0;
+}
+
+.tile.summary .runtime {
+	display: table-cell;
+	width: 40px;
+	height: 100%;
+	vertical-align: middle;
+	position: relative;
+	padding-left: 5px;
+}
+
+.tile.summary .runtime img {
+	vertical-align: middle;
+	margin-right: 10px;
+	z-index: 0;
+}
+
+.tile.summary .cloudOETileListItemMainDiv {
+	margin: 0 auto 0 auto;
+}
+
+.tile.summary .services {
+	display: table-cell;
+}
+
+.tile-HealthCell {
+	content: '';
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	float: left;
+	margin-right: 15px;
+	margin-left: 4px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin-top: 7px;
+}
+
+.tile-HealthCell.health.green {
+	background-color: #13dd6d;
+	box-shadow: 0px 0px 2pt 3pt #13dd6d;
+}
+
+.tile-HealthCell.health.yellow {
+	background-color: #f3f00a;
+	box-shadow: 0px 0px 3pt 3pt #f3f00a;
+}
+
+.tile-HealthCell.health.red {
+	background-color: #ff2c2c;
+	box-shadow: 0px 0px 3pt 3pt #ff2c2c;
+}
+
+.tile-HealthCell.health.grey {
+	background-color: #7a8991;
+	box-shadow: 0px 0px 3pt 3pt #7a8991;
+}
+
+.cloudOETileListArea.services .cloudOETileListItem,
+.cloudOETileListArea.runtime .cloudOETileListItem {
+	cursor: pointer; 
+}
+
+.appRoutes {
+	display: inline-block;
+}
+
+.appSummaryRoute {
+	margin-right: 10px;
+}
+
+/* summary tile */
+.cloudOESummaryTile .tile-segmented {
+	width: 100%;
+}
+.cloudOESummaryTile .tile-segment:first-child figcaption {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 10px;
+	font-weight: bold;
+	color: #94a3ab;
+}
+.cloudOESummaryTile .tile-segment:first-child figcaption:empty {
+	display: none;
+}
+.cloudOESummaryTile .settings-menu {
+	left: -211px;
+}
+.cloudOESummaryTile .tile-side-controls .docs {
+	margin-top: 15px;
+	margin-left: -8px;
+	display: none;
+}
+.cloudOESummaryTile.enableDocs:hover .tile-side-controls .docs {
+	display: block;
+	cursor: pointer;
+}
+.cloudOESummaryTile .cloudOEAppDetailsButtonDiv {
+	display: none;
+}
+.cloudOESummaryTile.editing .cloudOEAppDetailsButtonDiv {
+	display: block;
+	padding-bottom: 30px;
+}
+.cloudOESummaryTile .cloudOETileListItemHexagon .cloudOETileListItemMainDiv .hexagon72 {
+	/* this helps center the hexagon icon; seems to make more sense than -40px */
+	margin: 0 0 0 -36px;
+}
+
+/* runtime details */
+.cloudOERuntimeDetails .tile-segment.content {
+	 vertical-align: middle; 
+}
+/* default state: only hide FilesAndLogs */
+.cloudOERuntimeDetails .filesandlogs {
+	display: none;
+}
+/* showfilesandlogs state: show FilesAndLogs & hide the others */
+.cloudOERuntimeDetails.showfilesandlogs .usage,
+.cloudOERuntimeDetails.showfilesandlogs .instance,
+.cloudOERuntimeDetails.showfilesandlogs .envvars {
+	display: none;
+}
+.cloudOERuntimeDetails.showfilesandlogs .filesandlogs {
+	display: block;
+}
+.oneui .cloudOEFiles .cloudOEMessageArea {
+	padding: 20px;
+}
+.oneui .cloudOEFiles .cloudOEMessageAreaTextCell {
+	vertical-align: middle;
+}
+.oneui .cloudOEFiles .cloudOEMessageArea .cloudOEMessageAreaText {
+	font-size: inherit;
+	color: inherit;
+}
+/* bugs 93343/93344: Some of the runtime details child panes haven't had their
+   layout updated, so they have an implicit minimum width. If page is sized below
+   this point, then horizontal scrollbars appear within the panes. Temporarily
+   fix that here by adding a min-width to Runtime Details */
+.cloudOERuntimeDetails {
+	min-width: 1100px;
+}
+
+.cloudOEServiceInstanceDetails .settings-menu .disabled {
+	color: #94a3ab;
+	cursor: default;
+}
+
+.cloudOE .i-settings-large.cloudOEGearDisabled:hover {
+    background-position: -6px -12px;
+}
+
+/* Mobile SDK */
+.sdkDownload {
+	cursor: pointer;
+}
+
+.sdkIcon {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.sdkLink {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	text-decoration: underline;
+  	color: #00aed1;
+  	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  	font-weight: 300;
+  	font-size: 0.75em;
+}
+
+.sdkAPIKey {
+	vertical-align: middle;
+}
+
+.sdkApiKeyLabel {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 0.875em;
+	display: block;
+	font-weight: 300;
+	padding: 0 0 10px 5px;
+}
+
+.sdkApiKeyValue {
+	display: inline-block;
+	background-color: #26343f;
+	padding: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+	font-size: 0.75em;
+	color: #00b299;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+}
+
+.sdkTile .tile-segment.bordered {
+	display: inline-block;
+	margin-left: -4px;
+	padding: 30px 15px 30px 15px;
+	vertical-align: top;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.sdkTile .tile-segment.bordered:last-child {
+	margin-bottom: -8px;
+}
+
+@media screen and (max-width: 1100px) {
+	.sdkTile .tile-segment:first-child {
+		width: 50%;
+	}
+	.sdkTile .tile-segment:nth-child(2) {
+		width: 50%;
+		border: none;
+	}
+	.sdkTile .tile-segment:last-child {
+		width: 100%;
+		margin: 0px;
+		padding: 30px;
+		border-top: 1px solid #dfe6eb;
+		text-align: center;
+	}
+}
+
+.inputBox {
+	font-weight: 300;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 10px;
+	vertical-align: middle;
+	border: 1px solid #94a3ab;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	font: -webkit-small-control;
+	text-align: start;
+	outline: 300;
+}
+
+
+.cloudOE .userDefinedServiceDescriptionArea table,
+.userDefinedServiceTable {
+	width: 100%
+}
+
+.userDefinedServiceIconArea, .userDefinedServiceTableLabel {
+	width: 30%;
+}
+
+.userDefinedServiceDescriptionArea {
+	vertical-align: top;
+}
+
+.link {
+	text-decoration: underline;
+  	color: #00aed1;
+  	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  	font-weight: 300;
+	cursor: pointer;
+}
+
+.fullWidth {
+	width: 100%; 
+}
+
+.routeTable {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cloudOEDomainTable .dijitTextBox {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 10px;
+	color: #555;
+	margin-bottom: 10px
+}
+
+.cloudOEDomainTable .dijitSelect {
+	border-radius: 3px;
+	/* padding: 3px 10px 3px 5px !important; */
+	margin-bottom: 10px;
+}
+
+.cloudOEDomainTable .dijitSelect td {
+	vertical-align: middle;
+}
+
+.cloudOEDomainTable .dijitSelect .dijitButtonContents {
+	padding: 8px 10px 8px 10px;
+	font-size: 0.875em;
+}
+
+.oneui .cloudOEDomainTable .dijitSelect .dijitDownArrowButton {
+	background: #00aed1;
+	width: 30px;
+	height: 30px;
+}
+
+.deleteRouteDiv {
+	padding: 10px 10px 10px 5px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.deleteRouteDiv img {
+	margin-bottom: 4px;
+}
+
+.appDescriptionEdit {
+	margin-top: 20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 10px;
+	color: #555;
+}
+
+.dijitTooltipContainer {
+    border: 1px solid #ffffff;
+    background: #3b4b54;
+    color: #ffffff;
+    font-size: small;
+	padding: 15px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.healthTooltipDescription {
+	font-size: 0.875em;
+	margin-bottom: 10px;
+}
+
+.cloudOE .l-body {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 0px;
+}
+
+@media (max-width: 480px) {
+  .ProductName {
+    display: none;
+  }
+}
+
+.cloudOEGearDisabled {
+	opacity: 0.5;
+	cursor: auto !important;
+}
+
+/* MAR Task 93881: Make application icons into rounded squares with border wherever they appear. */
+img.appCardMainIcon,
+.cloudOE .serviceCard .bindings .cloudOETileListItem .cloudOETileListItemMainDiv img,
+.cloudOEAppDetails .tile-segment.icon > img,
+.cloudOE .cloudOEServiceInstanceDetails .serviceApps .cloudOETileListItem .cloudOETileListItemMainDiv img {
+	border: 1px solid #dfe6eb;
+	border-radius: 3px;
+}
+
+.cloudOERuntimeDetails .cloudOESummaryTile .tile-side-controls,
+.detailsRuntimeSection .tile-side-controls {
+	/* FIXME remove this rule when task  93866 is complete. */
+	display: none;
+}
+
+.orphanedentities {
+	font-size: 16px;
+	line-height: 19px;
+	margin-bottom: 15px
+}

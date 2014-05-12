@@ -1,0 +1,1355 @@
+[
+  {
+    "ID": 5052,
+    "UUID": "12140837-56F8-467E-BBCA-6D546CAC3389",
+    "ParentChargePointID": null,
+    "DataProviderID": 2,
+    "DataProvider": {
+      "WebsiteURL": "http://www.afdc.energy.gov/",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "ID": 2,
+      "Title": "afdc.energy.gov"
+    },
+    "DataProvidersReference": "40370",
+    "OperatorID": 5,
+    "OperatorInfo": {
+      "WebsiteURL": "http://www.chargepoint.net/",
+      "Comments": null,
+      "PhonePrimaryContact": "1-888-758-4389",
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": "support@coulombtech.com",
+      "FaultReportEmail": "support@coulombtech.com",
+      "IsRestrictedEdit": null,
+      "ID": 5,
+      "Title": "ChargePoint (Coulomb Technologies)"
+    },
+    "OperatorsReference": null,
+    "UsageTypeID": 2,
+    "UsageType": {
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": true,
+      "IsAccessKeyRequired": null,
+      "ID": 2,
+      "Title": "Private - Restricted Access"
+    },
+    "UsageCost": null,
+    "AddressInfo": {
+      "ID": 4992,
+      "Title": "PLUGNEVERYWHERE",
+      "AddressLine1": "201 E 2nd St",
+      "AddressLine2": null,
+      "Town": "Austin",
+      "StateOrProvince": "TX",
+      "Postcode": "78701",
+      "CountryID": 2,
+      "Country": {
+        "ISOCode": "US",
+        "ID": 2,
+        "Title": "United States"
+      },
+      "Latitude": 30.263552,
+      "Longitude": -97.742435,
+      "ContactTelephone1": "888-758-4389",
+      "ContactTelephone2": null,
+      "ContactEmail": null,
+      "AccessComments": "24 hours daily",
+      "RelatedURL": "http://www.mychargepoint.net/",
+      "Distance": 0.25085526037456018,
+      "DistanceUnit": 2
+    },
+    "NumberOfPoints": null,
+    "GeneralComments": null,
+    "DatePlanned": null,
+    "DateLastConfirmed": "2011-06-30T00:00:00",
+    "StatusTypeID": 0,
+    "StatusType": {
+      "IsOperational": null,
+      "IsUserSelectable": true,
+      "ID": 0,
+      "Title": "Unknown"
+    },
+    "DateLastStatusUpdate": "2014-02-06T06:25:00",
+    "DataQualityLevel": 1,
+    "DateCreated": "2011-07-27T11:31:00",
+    "Contributor": null,
+    "SubmissionStatusTypeID": 100,
+    "SubmissionStatus": {
+      "IsLive": true,
+      "ID": 100,
+      "Title": "Imported and Published"
+    },
+    "UserComments": null,
+    "PercentageSimilarity": null,
+    "Connections": [
+      {
+        "ID": 3755,
+        "ConnectionTypeID": 0,
+        "ConnectionType": {
+          "FormalName": "Not Specified",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 0,
+          "Title": "Unknown"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 1,
+        "Level": {
+          "Comments": "Under 2 kW, usually domestic socket types",
+          "IsFastChargeCapable": false,
+          "ID": 1,
+          "Title": "Level 1 : Low (Under 2kW)"
+        },
+        "Amps": null,
+        "Voltage": 120,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 3,
+        "Comments": null
+      },
+      {
+        "ID": 21045,
+        "ConnectionTypeID": 1,
+        "ConnectionType": {
+          "FormalName": "SAE J1772-2009",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 1,
+          "Title": "J1772"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 3,
+        "Comments": null
+      }
+    ],
+    "MediaItems": null,
+    "MetadataValues": null
+  },
+  {
+    "ID": 8345,
+    "UUID": "D21342B5-1285-4EE6-A1F1-593DA49B6FF2",
+    "ParentChargePointID": null,
+    "DataProviderID": 15,
+    "DataProvider": {
+      "WebsiteURL": "http://www.carstations.com",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "ID": 15,
+      "Title": "CarStations.com"
+    },
+    "DataProvidersReference": "10878",
+    "OperatorID": 5,
+    "OperatorInfo": {
+      "WebsiteURL": "http://www.chargepoint.net/",
+      "Comments": null,
+      "PhonePrimaryContact": "1-888-758-4389",
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": "support@coulombtech.com",
+      "FaultReportEmail": "support@coulombtech.com",
+      "IsRestrictedEdit": null,
+      "ID": 5,
+      "Title": "ChargePoint (Coulomb Technologies)"
+    },
+    "OperatorsReference": null,
+    "UsageTypeID": 1,
+    "UsageType": {
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": null,
+      "IsAccessKeyRequired": null,
+      "ID": 1,
+      "Title": "Public"
+    },
+    "UsageCost": null,
+    "AddressInfo": {
+      "ID": 8242,
+      "Title": "710 Trinity St",
+      "AddressLine1": "710 Trinity St",
+      "AddressLine2": null,
+      "Town": "Austin",
+      "StateOrProvince": "Texas",
+      "Postcode": "78701",
+      "CountryID": 2,
+      "Country": {
+        "ISOCode": "US",
+        "ID": 2,
+        "Title": "United States"
+      },
+      "Latitude": 30.26880455,
+      "Longitude": -97.73914337,
+      "ContactTelephone1": "",
+      "ContactTelephone2": null,
+      "ContactEmail": null,
+      "AccessComments": null,
+      "RelatedURL": "http://carstations.com/10878",
+      "Distance": 0.2603969364771121,
+      "DistanceUnit": 2
+    },
+    "NumberOfPoints": 1,
+    "GeneralComments": null,
+    "DatePlanned": null,
+    "DateLastConfirmed": null,
+    "StatusTypeID": 0,
+    "StatusType": {
+      "IsOperational": null,
+      "IsUserSelectable": true,
+      "ID": 0,
+      "Title": "Unknown"
+    },
+    "DateLastStatusUpdate": "2014-03-19T04:42:00",
+    "DataQualityLevel": 1,
+    "DateCreated": "2011-11-11T12:06:00",
+    "Contributor": null,
+    "SubmissionStatusTypeID": 100,
+    "SubmissionStatus": {
+      "IsLive": true,
+      "ID": 100,
+      "Title": "Imported and Published"
+    },
+    "UserComments": null,
+    "PercentageSimilarity": null,
+    "Connections": [
+      {
+        "ID": 5774,
+        "ConnectionTypeID": 9,
+        "ConnectionType": {
+          "FormalName": null,
+          "IsDiscontinued": false,
+          "IsObsolete": false,
+          "ID": 9,
+          "Title": "NEMA 5-20R"
+        },
+        "Reference": "NEMA5",
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 1,
+        "Level": {
+          "Comments": "Under 2 kW, usually domestic socket types",
+          "IsFastChargeCapable": false,
+          "ID": 1,
+          "Title": "Level 1 : Low (Under 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": null,
+        "Comments": null
+      },
+      {
+        "ID": 6203,
+        "ConnectionTypeID": 1,
+        "ConnectionType": {
+          "FormalName": "SAE J1772-2009",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 1,
+          "Title": "J1772"
+        },
+        "Reference": "J1772",
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": null,
+        "Comments": null
+      }
+    ],
+    "MediaItems": null,
+    "MetadataValues": null
+  },
+  {
+    "ID": 8347,
+    "UUID": "EFB3BF0A-0BFA-4807-AF42-318C913167D4",
+    "ParentChargePointID": null,
+    "DataProviderID": 15,
+    "DataProvider": {
+      "WebsiteURL": "http://www.carstations.com",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "ID": 15,
+      "Title": "CarStations.com"
+    },
+    "DataProvidersReference": "10732",
+    "OperatorID": 5,
+    "OperatorInfo": {
+      "WebsiteURL": "http://www.chargepoint.net/",
+      "Comments": null,
+      "PhonePrimaryContact": "1-888-758-4389",
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": "support@coulombtech.com",
+      "FaultReportEmail": "support@coulombtech.com",
+      "IsRestrictedEdit": null,
+      "ID": 5,
+      "Title": "ChargePoint (Coulomb Technologies)"
+    },
+    "OperatorsReference": null,
+    "UsageTypeID": 1,
+    "UsageType": {
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": null,
+      "IsAccessKeyRequired": null,
+      "ID": 1,
+      "Title": "Public"
+    },
+    "UsageCost": null,
+    "AddressInfo": {
+      "ID": 8244,
+      "Title": "201 E 2nd St",
+      "AddressLine1": "201 E 2nd St",
+      "AddressLine2": null,
+      "Town": "Austin",
+      "StateOrProvince": "Texas",
+      "Postcode": "78701",
+      "CountryID": 2,
+      "Country": {
+        "ISOCode": "US",
+        "ID": 2,
+        "Title": "United States"
+      },
+      "Latitude": 30.26372337,
+      "Longitude": -97.74052429,
+      "ContactTelephone1": "",
+      "ContactTelephone2": null,
+      "ContactEmail": null,
+      "AccessComments": null,
+      "RelatedURL": "http://carstations.com/10732",
+      "Distance": 0.2807387341868533,
+      "DistanceUnit": 2
+    },
+    "NumberOfPoints": 1,
+    "GeneralComments": null,
+    "DatePlanned": null,
+    "DateLastConfirmed": null,
+    "StatusTypeID": 0,
+    "StatusType": {
+      "IsOperational": null,
+      "IsUserSelectable": true,
+      "ID": 0,
+      "Title": "Unknown"
+    },
+    "DateLastStatusUpdate": "2014-03-19T04:42:00",
+    "DataQualityLevel": 1,
+    "DateCreated": "2011-11-11T12:06:00",
+    "Contributor": null,
+    "SubmissionStatusTypeID": 100,
+    "SubmissionStatus": {
+      "IsLive": true,
+      "ID": 100,
+      "Title": "Imported and Published"
+    },
+    "UserComments": null,
+    "PercentageSimilarity": null,
+    "Connections": [
+      {
+        "ID": 5776,
+        "ConnectionTypeID": 1,
+        "ConnectionType": {
+          "FormalName": "SAE J1772-2009",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 1,
+          "Title": "J1772"
+        },
+        "Reference": "J1772",
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": null,
+        "Comments": null
+      },
+      {
+        "ID": 6378,
+        "ConnectionTypeID": 9,
+        "ConnectionType": {
+          "FormalName": null,
+          "IsDiscontinued": false,
+          "IsObsolete": false,
+          "ID": 9,
+          "Title": "NEMA 5-20R"
+        },
+        "Reference": "NEMA5",
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 1,
+        "Level": {
+          "Comments": "Under 2 kW, usually domestic socket types",
+          "IsFastChargeCapable": false,
+          "ID": 1,
+          "Title": "Level 1 : Low (Under 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": null,
+        "Comments": null
+      }
+    ],
+    "MediaItems": null,
+    "MetadataValues": null
+  },
+  {
+    "ID": 4339,
+    "UUID": "FF9476F2-D176-4875-96EC-D6A42D5ECCDE",
+    "ParentChargePointID": null,
+    "DataProviderID": 2,
+    "DataProvider": {
+      "WebsiteURL": "http://www.afdc.energy.gov/",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "ID": 2,
+      "Title": "afdc.energy.gov"
+    },
+    "DataProvidersReference": "38993",
+    "OperatorID": 5,
+    "OperatorInfo": {
+      "WebsiteURL": "http://www.chargepoint.net/",
+      "Comments": null,
+      "PhonePrimaryContact": "1-888-758-4389",
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": "support@coulombtech.com",
+      "FaultReportEmail": "support@coulombtech.com",
+      "IsRestrictedEdit": null,
+      "ID": 5,
+      "Title": "ChargePoint (Coulomb Technologies)"
+    },
+    "OperatorsReference": null,
+    "UsageTypeID": 2,
+    "UsageType": {
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": true,
+      "IsAccessKeyRequired": null,
+      "ID": 2,
+      "Title": "Private - Restricted Access"
+    },
+    "UsageCost": null,
+    "AddressInfo": {
+      "ID": 4338,
+      "Title": "PLUGNEVERYWHERE",
+      "AddressLine1": "301 W 2nd St",
+      "AddressLine2": null,
+      "Town": "Austin",
+      "StateOrProvince": "TX",
+      "Postcode": "78701",
+      "CountryID": 2,
+      "Country": {
+        "ISOCode": "US",
+        "ID": 2,
+        "Title": "United States"
+      },
+      "Latitude": 30.2648963,
+      "Longitude": -97.747196,
+      "ContactTelephone1": "888-758-4389",
+      "ContactTelephone2": null,
+      "ContactEmail": null,
+      "AccessComments": "24 hours daily",
+      "RelatedURL": "http://www.mychargepoint.net/",
+      "Distance": 0.29206234354466615,
+      "DistanceUnit": 2
+    },
+    "NumberOfPoints": null,
+    "GeneralComments": null,
+    "DatePlanned": null,
+    "DateLastConfirmed": "2011-06-30T00:00:00",
+    "StatusTypeID": 0,
+    "StatusType": {
+      "IsOperational": null,
+      "IsUserSelectable": true,
+      "ID": 0,
+      "Title": "Unknown"
+    },
+    "DateLastStatusUpdate": "2014-02-06T06:27:00",
+    "DataQualityLevel": 1,
+    "DateCreated": "2011-05-09T14:58:00",
+    "Contributor": null,
+    "SubmissionStatusTypeID": 100,
+    "SubmissionStatus": {
+      "IsLive": true,
+      "ID": 100,
+      "Title": "Imported and Published"
+    },
+    "UserComments": null,
+    "PercentageSimilarity": null,
+    "Connections": [
+      {
+        "ID": 3489,
+        "ConnectionTypeID": 0,
+        "ConnectionType": {
+          "FormalName": "Not Specified",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 0,
+          "Title": "Unknown"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 1,
+        "Level": {
+          "Comments": "Under 2 kW, usually domestic socket types",
+          "IsFastChargeCapable": false,
+          "ID": 1,
+          "Title": "Level 1 : Low (Under 2kW)"
+        },
+        "Amps": null,
+        "Voltage": 120,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 2,
+        "Comments": null
+      },
+      {
+        "ID": 20672,
+        "ConnectionTypeID": 1,
+        "ConnectionType": {
+          "FormalName": "SAE J1772-2009",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 1,
+          "Title": "J1772"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 2,
+        "Comments": null
+      }
+    ],
+    "MediaItems": null,
+    "MetadataValues": null
+  },
+  {
+    "ID": 5693,
+    "UUID": "7AD1D6CE-8A92-4D17-B678-8071721F3B9D",
+    "ParentChargePointID": null,
+    "DataProviderID": 1,
+    "DataProvider": {
+      "WebsiteURL": "http://openchargemap.org",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 1,
+        "Title": "Manual Data Entry"
+      },
+      "IsRestrictedEdit": false,
+      "ID": 1,
+      "Title": "Open Charge Map Contributor"
+    },
+    "DataProvidersReference": null,
+    "OperatorID": 1,
+    "OperatorInfo": {
+      "WebsiteURL": null,
+      "Comments": null,
+      "PhonePrimaryContact": null,
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": null,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": null,
+      "FaultReportEmail": null,
+      "IsRestrictedEdit": null,
+      "ID": 1,
+      "Title": "(Unknown Operator)"
+    },
+    "OperatorsReference": null,
+    "UsageTypeID": 1,
+    "UsageType": {
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": null,
+      "IsAccessKeyRequired": null,
+      "ID": 1,
+      "Title": "Public"
+    },
+    "UsageCost": null,
+    "AddressInfo": {
+      "ID": 5615,
+      "Title": "Mellow Johnny's Bike Shop",
+      "AddressLine1": "400 Nueces St.",
+      "AddressLine2": "",
+      "Town": "Austin",
+      "StateOrProvince": "TX",
+      "Postcode": "78701",
+      "CountryID": 2,
+      "Country": {
+        "ISOCode": "US",
+        "ID": 2,
+        "Title": "United States"
+      },
+      "Latitude": 30.268109,
+      "Longitude": -97.749269,
+      "ContactTelephone1": "+1 512 473-0222",
+      "ContactTelephone2": null,
+      "ContactEmail": "",
+      "AccessComments": "AeroVironment EVSE, free access",
+      "RelatedURL": null,
+      "Distance": 0.37699833495988744,
+      "DistanceUnit": 2
+    },
+    "NumberOfPoints": 1,
+    "GeneralComments": "Verified free & operational in Jul 2011",
+    "DatePlanned": null,
+    "DateLastConfirmed": "2011-09-09T04:19:00",
+    "StatusTypeID": 50,
+    "StatusType": {
+      "IsOperational": true,
+      "IsUserSelectable": true,
+      "ID": 50,
+      "Title": "Operational"
+    },
+    "DateLastStatusUpdate": "2011-09-09T04:19:00",
+    "DataQualityLevel": 1,
+    "DateCreated": "2011-09-09T04:19:00",
+    "Contributor": null,
+    "SubmissionStatusTypeID": 200,
+    "SubmissionStatus": {
+      "IsLive": true,
+      "ID": 200,
+      "Title": "Submission Published"
+    },
+    "UserComments": null,
+    "PercentageSimilarity": null,
+    "Connections": [
+      {
+        "ID": 442,
+        "ConnectionTypeID": 1,
+        "ConnectionType": {
+          "FormalName": "SAE J1772-2009",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 1,
+          "Title": "J1772"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": null,
+        "Comments": null
+      }
+    ],
+    "MediaItems": null,
+    "MetadataValues": null
+  },
+  {
+    "ID": 8346,
+    "UUID": "BF3C4B16-8469-44FF-9A2F-29DA6F00B91B",
+    "ParentChargePointID": null,
+    "DataProviderID": 15,
+    "DataProvider": {
+      "WebsiteURL": "http://www.carstations.com",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "ID": 15,
+      "Title": "CarStations.com"
+    },
+    "DataProvidersReference": "11192",
+    "OperatorID": 5,
+    "OperatorInfo": {
+      "WebsiteURL": "http://www.chargepoint.net/",
+      "Comments": null,
+      "PhonePrimaryContact": "1-888-758-4389",
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": "support@coulombtech.com",
+      "FaultReportEmail": "support@coulombtech.com",
+      "IsRestrictedEdit": null,
+      "ID": 5,
+      "Title": "ChargePoint (Coulomb Technologies)"
+    },
+    "OperatorsReference": null,
+    "UsageTypeID": null,
+    "UsageType": null,
+    "UsageCost": null,
+    "AddressInfo": {
+      "ID": 8243,
+      "Title": "1601 N Interstate 35",
+      "AddressLine1": "1601 N Interstate 35",
+      "AddressLine2": null,
+      "Town": "Austin",
+      "StateOrProvince": "Texas",
+      "Postcode": "78702",
+      "CountryID": 2,
+      "Country": {
+        "ISOCode": "US",
+        "ID": 2,
+        "Title": "United States"
+      },
+      "Latitude": 30.26498985,
+      "Longitude": -97.73420715,
+      "ContactTelephone1": "",
+      "ContactTelephone2": null,
+      "ContactEmail": null,
+      "AccessComments": null,
+      "RelatedURL": "http://carstations.com/11192",
+      "Distance": 0.54995848045465912,
+      "DistanceUnit": 2
+    },
+    "NumberOfPoints": null,
+    "GeneralComments": null,
+    "DatePlanned": null,
+    "DateLastConfirmed": null,
+    "StatusTypeID": 0,
+    "StatusType": {
+      "IsOperational": null,
+      "IsUserSelectable": true,
+      "ID": 0,
+      "Title": "Unknown"
+    },
+    "DateLastStatusUpdate": "2014-03-19T04:42:00",
+    "DataQualityLevel": 1,
+    "DateCreated": "2011-11-11T12:06:00",
+    "Contributor": null,
+    "SubmissionStatusTypeID": 100,
+    "SubmissionStatus": {
+      "IsLive": true,
+      "ID": 100,
+      "Title": "Imported and Published"
+    },
+    "UserComments": null,
+    "PercentageSimilarity": null,
+    "Connections": [
+      {
+        "ID": 5775,
+        "ConnectionTypeID": 1,
+        "ConnectionType": {
+          "FormalName": "SAE J1772-2009",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 1,
+          "Title": "J1772"
+        },
+        "Reference": "J1772",
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": null,
+        "Comments": null
+      },
+      {
+        "ID": 6644,
+        "ConnectionTypeID": 9,
+        "ConnectionType": {
+          "FormalName": null,
+          "IsDiscontinued": false,
+          "IsObsolete": false,
+          "ID": 9,
+          "Title": "NEMA 5-20R"
+        },
+        "Reference": "NEMA5",
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 1,
+        "Level": {
+          "Comments": "Under 2 kW, usually domestic socket types",
+          "IsFastChargeCapable": false,
+          "ID": 1,
+          "Title": "Level 1 : Low (Under 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": null,
+        "Comments": null
+      }
+    ],
+    "MediaItems": null,
+    "MetadataValues": null
+  },
+  {
+    "ID": 4342,
+    "UUID": "BBD3F7E1-65BC-4A43-93AE-76C7CED4B23C",
+    "ParentChargePointID": null,
+    "DataProviderID": 2,
+    "DataProvider": {
+      "WebsiteURL": "http://www.afdc.energy.gov/",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "ID": 2,
+      "Title": "afdc.energy.gov"
+    },
+    "DataProvidersReference": "38996",
+    "OperatorID": 5,
+    "OperatorInfo": {
+      "WebsiteURL": "http://www.chargepoint.net/",
+      "Comments": null,
+      "PhonePrimaryContact": "1-888-758-4389",
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": "support@coulombtech.com",
+      "FaultReportEmail": "support@coulombtech.com",
+      "IsRestrictedEdit": null,
+      "ID": 5,
+      "Title": "ChargePoint (Coulomb Technologies)"
+    },
+    "OperatorsReference": null,
+    "UsageTypeID": 2,
+    "UsageType": {
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": true,
+      "IsAccessKeyRequired": null,
+      "ID": 2,
+      "Title": "Private - Restricted Access"
+    },
+    "UsageCost": null,
+    "AddressInfo": {
+      "ID": 4341,
+      "Title": "PLUGNEVERYWHERE",
+      "AddressLine1": "600 River St",
+      "AddressLine2": null,
+      "Town": "Austin",
+      "StateOrProvince": "TX",
+      "Postcode": "78701",
+      "CountryID": 2,
+      "Country": {
+        "ISOCode": "US",
+        "ID": 2,
+        "Title": "United States"
+      },
+      "Latitude": 30.2581564,
+      "Longitude": -97.7400431,
+      "ContactTelephone1": "888-758-4389",
+      "ContactTelephone2": null,
+      "ContactEmail": null,
+      "AccessComments": "24 hours daily",
+      "RelatedURL": "http://www.mychargepoint.net/",
+      "Distance": 0.64545108979043531,
+      "DistanceUnit": 2
+    },
+    "NumberOfPoints": null,
+    "GeneralComments": null,
+    "DatePlanned": null,
+    "DateLastConfirmed": "2011-06-30T00:00:00",
+    "StatusTypeID": 0,
+    "StatusType": {
+      "IsOperational": null,
+      "IsUserSelectable": true,
+      "ID": 0,
+      "Title": "Unknown"
+    },
+    "DateLastStatusUpdate": "2014-02-06T06:25:00",
+    "DataQualityLevel": 1,
+    "DateCreated": "2011-05-09T14:58:00",
+    "Contributor": null,
+    "SubmissionStatusTypeID": 100,
+    "SubmissionStatus": {
+      "IsLive": true,
+      "ID": 100,
+      "Title": "Imported and Published"
+    },
+    "UserComments": null,
+    "PercentageSimilarity": null,
+    "Connections": [
+      {
+        "ID": 3492,
+        "ConnectionTypeID": 0,
+        "ConnectionType": {
+          "FormalName": "Not Specified",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 0,
+          "Title": "Unknown"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 1,
+        "Level": {
+          "Comments": "Under 2 kW, usually domestic socket types",
+          "IsFastChargeCapable": false,
+          "ID": 1,
+          "Title": "Level 1 : Low (Under 2kW)"
+        },
+        "Amps": null,
+        "Voltage": 120,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 2,
+        "Comments": null
+      },
+      {
+        "ID": 22502,
+        "ConnectionTypeID": 1,
+        "ConnectionType": {
+          "FormalName": "SAE J1772-2009",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 1,
+          "Title": "J1772"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 2,
+        "Comments": null
+      }
+    ],
+    "MediaItems": null,
+    "MetadataValues": null
+  },
+  {
+    "ID": 2951,
+    "UUID": "99E5F0DD-EB42-4812-A01E-AC4525D0400A",
+    "ParentChargePointID": null,
+    "DataProviderID": 2,
+    "DataProvider": {
+      "WebsiteURL": "http://www.afdc.energy.gov/",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "ID": 2,
+      "Title": "afdc.energy.gov"
+    },
+    "DataProvidersReference": "36375",
+    "OperatorID": 5,
+    "OperatorInfo": {
+      "WebsiteURL": "http://www.chargepoint.net/",
+      "Comments": null,
+      "PhonePrimaryContact": "1-888-758-4389",
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": "support@coulombtech.com",
+      "FaultReportEmail": "support@coulombtech.com",
+      "IsRestrictedEdit": null,
+      "ID": 5,
+      "Title": "ChargePoint (Coulomb Technologies)"
+    },
+    "OperatorsReference": null,
+    "UsageTypeID": 2,
+    "UsageType": {
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": true,
+      "IsAccessKeyRequired": null,
+      "ID": 2,
+      "Title": "Private - Restricted Access"
+    },
+    "UsageCost": null,
+    "AddressInfo": {
+      "ID": 2952,
+      "Title": "WHOLE FOODS MKT",
+      "AddressLine1": "525 N Lamar Blvd",
+      "AddressLine2": null,
+      "Town": "Austin",
+      "StateOrProvince": "TX",
+      "Postcode": "78703",
+      "CountryID": 2,
+      "Country": {
+        "ISOCode": "US",
+        "ID": 2,
+        "Title": "United States"
+      },
+      "Latitude": 30.2711792,
+      "Longitude": -97.7537842,
+      "ContactTelephone1": "888-758-4389",
+      "ContactTelephone2": null,
+      "ContactEmail": null,
+      "AccessComments": "24 hours daily",
+      "RelatedURL": "http://www.mychargepoint.net/",
+      "Distance": 0.69857772776187643,
+      "DistanceUnit": 2
+    },
+    "NumberOfPoints": null,
+    "GeneralComments": null,
+    "DatePlanned": null,
+    "DateLastConfirmed": "2011-04-30T00:00:00",
+    "StatusTypeID": 0,
+    "StatusType": {
+      "IsOperational": null,
+      "IsUserSelectable": true,
+      "ID": 0,
+      "Title": "Unknown"
+    },
+    "DateLastStatusUpdate": "2014-02-06T06:27:00",
+    "DataQualityLevel": 1,
+    "DateCreated": "2011-04-30T00:00:00",
+    "Contributor": null,
+    "SubmissionStatusTypeID": 100,
+    "SubmissionStatus": {
+      "IsLive": true,
+      "ID": 100,
+      "Title": "Imported and Published"
+    },
+    "UserComments": null,
+    "PercentageSimilarity": null,
+    "Connections": [
+      {
+        "ID": 15358,
+        "ConnectionTypeID": 0,
+        "ConnectionType": {
+          "FormalName": "Not Specified",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 0,
+          "Title": "Unknown"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 1,
+        "Level": {
+          "Comments": "Under 2 kW, usually domestic socket types",
+          "IsFastChargeCapable": false,
+          "ID": 1,
+          "Title": "Level 1 : Low (Under 2kW)"
+        },
+        "Amps": null,
+        "Voltage": 120,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 1,
+        "Comments": null
+      },
+      {
+        "ID": 15359,
+        "ConnectionTypeID": 0,
+        "ConnectionType": {
+          "FormalName": "Not Specified",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 0,
+          "Title": "Unknown"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 1,
+        "Comments": null
+      },
+      {
+        "ID": 20333,
+        "ConnectionTypeID": 1,
+        "ConnectionType": {
+          "FormalName": "SAE J1772-2009",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 1,
+          "Title": "J1772"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 1,
+        "Comments": null
+      }
+    ],
+    "MediaItems": null,
+    "MetadataValues": null
+  },
+  {
+    "ID": 5054,
+    "UUID": "493E5123-078B-4A29-9F29-64CA90C01F94",
+    "ParentChargePointID": null,
+    "DataProviderID": 2,
+    "DataProvider": {
+      "WebsiteURL": "http://www.afdc.energy.gov/",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "ID": 2,
+      "Title": "afdc.energy.gov"
+    },
+    "DataProvidersReference": "40372",
+    "OperatorID": 5,
+    "OperatorInfo": {
+      "WebsiteURL": "http://www.chargepoint.net/",
+      "Comments": null,
+      "PhonePrimaryContact": "1-888-758-4389",
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": "support@coulombtech.com",
+      "FaultReportEmail": "support@coulombtech.com",
+      "IsRestrictedEdit": null,
+      "ID": 5,
+      "Title": "ChargePoint (Coulomb Technologies)"
+    },
+    "OperatorsReference": null,
+    "UsageTypeID": 2,
+    "UsageType": {
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": true,
+      "IsAccessKeyRequired": null,
+      "ID": 2,
+      "Title": "Private - Restricted Access"
+    },
+    "UsageCost": null,
+    "AddressInfo": {
+      "ID": 4994,
+      "Title": "PLUGNEVERYWHERE",
+      "AddressLine1": "505 Barton Springs Rd",
+      "AddressLine2": null,
+      "Town": "Austin",
+      "StateOrProvince": "TX",
+      "Postcode": "78704",
+      "CountryID": 2,
+      "Country": {
+        "ISOCode": "US",
+        "ID": 2,
+        "Title": "United States"
+      },
+      "Latitude": 30.2572701,
+      "Longitude": -97.7492982,
+      "ContactTelephone1": "888-758-4389",
+      "ContactTelephone2": null,
+      "ContactEmail": null,
+      "AccessComments": "24 hours daily",
+      "RelatedURL": "http://www.mychargepoint.net/",
+      "Distance": 0.77624008519331655,
+      "DistanceUnit": 2
+    },
+    "NumberOfPoints": null,
+    "GeneralComments": null,
+    "DatePlanned": null,
+    "DateLastConfirmed": "2011-06-30T00:00:00",
+    "StatusTypeID": 0,
+    "StatusType": {
+      "IsOperational": null,
+      "IsUserSelectable": true,
+      "ID": 0,
+      "Title": "Unknown"
+    },
+    "DateLastStatusUpdate": "2014-02-06T06:27:00",
+    "DataQualityLevel": 1,
+    "DateCreated": "2011-07-27T11:31:00",
+    "Contributor": null,
+    "SubmissionStatusTypeID": 100,
+    "SubmissionStatus": {
+      "IsLive": true,
+      "ID": 100,
+      "Title": "Imported and Published"
+    },
+    "UserComments": null,
+    "PercentageSimilarity": null,
+    "Connections": [
+      {
+        "ID": 3757,
+        "ConnectionTypeID": 0,
+        "ConnectionType": {
+          "FormalName": "Not Specified",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 0,
+          "Title": "Unknown"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 1,
+        "Level": {
+          "Comments": "Under 2 kW, usually domestic socket types",
+          "IsFastChargeCapable": false,
+          "ID": 1,
+          "Title": "Level 1 : Low (Under 2kW)"
+        },
+        "Amps": null,
+        "Voltage": 120,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 3,
+        "Comments": null
+      },
+      {
+        "ID": 21047,
+        "ConnectionTypeID": 1,
+        "ConnectionType": {
+          "FormalName": "SAE J1772-2009",
+          "IsDiscontinued": null,
+          "IsObsolete": null,
+          "ID": 1,
+          "Title": "J1772"
+        },
+        "Reference": null,
+        "StatusTypeID": null,
+        "StatusType": null,
+        "LevelID": 2,
+        "Level": {
+          "Comments": "Over 2 kW, usually non-domestic socket type",
+          "IsFastChargeCapable": false,
+          "ID": 2,
+          "Title": "Level 2 : Medium (Over 2kW)"
+        },
+        "Amps": null,
+        "Voltage": null,
+        "PowerKW": null,
+        "CurrentTypeID": null,
+        "CurrentType": null,
+        "Quantity": 3,
+        "Comments": null
+      }
+    ],
+    "MediaItems": null,
+    "MetadataValues": null
+  }
+]

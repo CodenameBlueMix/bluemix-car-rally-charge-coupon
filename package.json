@@ -1,0 +1,23 @@
+{
+    "name":                 "bluemix-car-rally",
+    "main":                 "./lib/server",
+    "description":          "the BlueMix Electric Car Rally demo",
+    "version":              "0.1.0",
+    "dependencies": {
+        "cf-env":           "0.1.x",
+        "concat-stream":    "1.4.x",
+        "express":          "3.4.x",
+        "nano":             "5.7.x",
+        "nopt":             "2.2.x",
+        "q":                "1.0.x",
+        "underscore":       "1.6.x"
+    },
+    "devDependencies": {
+        "ang-tangle":       "0.1.x",
+        "browserify":       "3.33.x",
+        "cat-source-map":   "0.1.x",
+        "coffee-script":    "1.7.x",
+        "mocha":            "1.18.x",
+        "expect.js":        "0.3.x"
+    }
+}

@@ -1,0 +1,85 @@
+<!-- Licensed under the Apache License. See footer for details. -->
+
+<!-- ======================================================================= -->
+
+<h3>Sample Customer Email</h3>
+
+<div class="email">
+
+	<table>
+		<tr><td>from:    <td>Metro Company
+		<tr><td>to:      <td>{{customer.name}}
+		<tr><td>subject: <td>Want a Free Car Charge?
+	</table>
+
+	<p></p>
+
+	<div id='emailBody'><p>{{customer.name}}, for being such a loyal Metro customer, we'd like to thank you by giving you a free electric charge gift coupon.</p>
+
+	<img id='imgCoupon' src="http://{{pageHost}}/images/electricChargeCoupon_ipad.png" width="100%"/>
+
+	<p></p>
+	<p>We hope to see you at the upcoming Austin Electric Car Rally. There are a number of participating <a onclick="javascript:window.scrollTo(0,0);" href="http://{{pageHost}}/#/map/{{customer.lat}},{{customer.lon}}">charging stations</a> near the event.</p></div>	
+
+</div>
+
+<script>
+	selectDashboardItem('email', 'Email');
+
+	function toggleEmail() {
+		var src = document.getElementById("emailBody");
+		var dst = document.getElementById("dst");
+		if (dst.classList.contains("car-rally-empty")) {
+			dst.textContent = new String(src.innerHTML);
+			dst.classList.remove("car-rally-empty");
+			dst.style.display='inherit';
+		} else {
+			dst.style.display='none'
+			dst.textContent = "";
+			dst.classList.add("car-rally-empty");
+		}
+	}
+
+</script>
+
+	<div class="cloudOESpriteIcon">
+		<div class="cloudOESpriteIcon_icon_arrowLeft cloudOESpriteIcon"></div>
+		<div class="cloudOESpriteIcon_icon_arrowRight cloudOESpriteIcon"></div>
+	</div>
+	
+<center>
+
+	<div class="btn-group">
+	    <button ng-click="custPrev()" type="button" class="btn btn-default btn-lg">
+	    	<span class="glyphicon glyphicon-arrow-left"></span>
+	    </button>
+	    <button type="button" class="btn btn-default btn-lg" onclick="javascript:toggleEmail()">
+	    	<span class="glyphicon glyphicon-envelope"></span>
+	    </button>
+	    <button ng-click="custNext()" type="button" class="btn btn-default btn-lg">
+	    	<span class="glyphicon glyphicon-arrow-right"></span>
+	    </button>
+	</div>
+</center>
+<p></p>
+<pre id="dst" class="car-rally-empty" style='display: none;'></pre>
+
+<!-- ======================================================================= -->
+
+<!--
+#===============================================================================
+# Copyright IBM Corp. 2014
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#===============================================================================
+-->

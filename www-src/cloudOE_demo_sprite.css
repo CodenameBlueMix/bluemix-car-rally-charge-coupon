@@ -1,0 +1,25 @@
+/************************************/
+/* CloudOE Sprite icons             */
+/************************************/
+
+.cloudOESpriteIcon {
+	background: url("images/cloudOE_demo_sprite.png") top left no-repeat;
+	vertical-align: middle;
+}
+.cloudOESpriteIcon_icon_arrowLeft {
+	width: 20px;
+	height: 21x;
+	background-position: 0px 0px;
+}
+.cloudOESpriteIcon_icon_arrowRight {
+	width: 20px;
+	height: 21px;
+	background-position: 0px -24px;
+}
+
+
+
+ 
+
+
+

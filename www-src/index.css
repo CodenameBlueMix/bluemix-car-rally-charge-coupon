@@ -1,0 +1,95 @@
+/* Licensed under the Apache License. See footer for details. */
+
+/* pre-definition of ng-cloak to hide template-y goodness */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display:              none;
+}
+
+html {
+    height:     100%;
+}
+
+body {
+    height:     100%;
+}
+
+.email {
+    margin:        1em;
+    padding:       1em;
+    border:        thin solid black;
+    border-radius: 0.5em;
+}
+
+.email td {
+    padding-right: 1em;
+    font-weight:   bold;
+}
+
+.navbar {
+    z-index: 1;
+}
+
+.zzz-map-container {
+    position:           absolute;
+    top:                50%;
+    bottom:             0;
+    left:               0;
+    right:              0;
+}
+
+.logo-128 {
+    background-image:   url(images/icon-512.png);
+    width:              128px;
+    height:             128px;
+}
+
+.logo-64 {
+    background-image:   url(images/icon-512.png);
+    width:              648px;
+    height:             648px;
+}
+
+.gmap-iw-error {
+    color:              red;
+}
+
+.gmap-iw-info {
+    color:              deepSkyBlue;
+}
+
+a.car-rally-menu-item {
+    color: #b3b3b3
+}
+
+a:hover.car-rally-menu-item  {
+    color: white;
+    text-decoration: none;
+}
+
+a.car-rally-menu-item-selected  {
+    padding-bottom: 12px;
+    color: white;
+    border-bottom: 4px solid #00b299;
+}
+
+a:hover.car-rally-menu-item-selected {
+    text-decoration: none;
+}
+/*
+#-------------------------------------------------------------------------------
+# Copyright IBM Corp. 2014
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#-------------------------------------------------------------------------------
+*/

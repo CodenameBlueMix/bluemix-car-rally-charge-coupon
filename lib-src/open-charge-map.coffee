@@ -17,18 +17,12 @@ else
 
 ocmService = cfEnv.getService OPEN_CHARGE_SERVICE
 
-API_PARMS = [
-    "output=json"
-    "maxresults=9"
-    "dataproviderid=1"
-]
-
 if ocmService.credentials.url != undefined and ocmService.credentials.url != ""
     API_URL = ocmService.credentials.url
 else
-    API_URL = "http://api.openchargemap.io/v2/poi/?#{API_PARMS.join '&'}&"
+    API_URL = "http://api.openchargemap.io/v2/poi/?output=json&maxresults=9&dataproviderid=1&"
 
-utils.log "using Open Charge API " + API_URL
+utils.log "using Open Charge API URL #{API_URL}"
 
 #-------------------------------------------------------------------------------
 # return location data from Open Charge Map

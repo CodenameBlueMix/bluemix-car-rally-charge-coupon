@@ -1,0 +1,5 @@
+APP_NAME := car-rally-charge-coupon-$(RANDOM)
+HOST_NAME := car-rally-charge-coupon-$(RANDOM)
+DATABASE_SERVICE_NAME := car-rally-charge-coupon-db
+OPEN_CHARGE_API_SERVICE_NAME := open-charge-api-v2
+OPEN_CHARGE_API_SERVICE_URL := '{"url": "http://api.openchargemap.io/v2/poi/?output=json&maxresults=9&dataproviderid=1&"}'

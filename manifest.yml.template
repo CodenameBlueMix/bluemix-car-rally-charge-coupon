@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 applications:
-- name:      car-rally-charge-coupon-12750
+- name:      $APP_NAME
   memory:    128M
-  host:	     car-rally-charge-coupon-12750
+  host:	     $HOST_NAME
   services:
-  - car-rally-charge-coupon-db
-  - open-charge-api-v2
+  - $DATABASE_SERVICE_NAME
+  - $OPEN_CHARGE_API_SERVICE_NAME

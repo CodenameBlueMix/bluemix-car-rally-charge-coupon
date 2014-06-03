@@ -4,7 +4,7 @@ include SETTINGS
 all: clean_cache build deploy
 
 #execute once before running make
-configure: build
+configure: get build
 	sed 's/$$APP_NAME/$(APP_NAME)/g' manifest.yml.template | \
         sed 's/$$HOST_NAME/$(HOST_NAME)/g' | \
         sed 's/$$DATABASE_SERVICE_NAME/$(DATABASE_SERVICE_NAME)/g' | \
@@ -26,7 +26,6 @@ deploy:
 	cf push
 
 build:
-	jbuild build
 	jbuild build
 
 get:

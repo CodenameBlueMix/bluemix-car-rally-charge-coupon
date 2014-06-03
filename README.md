@@ -10,6 +10,8 @@ tl;dr
     cd bluemix-car-rally-charge-coupon
     make install
 
+Use your Bluemix login credentials and your Cloudant database settings when prompted.
+
 installation
 ================================================================================
 

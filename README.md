@@ -5,12 +5,12 @@ Implements the Electric Car Rally demo for BlueMix.
 
 tl;dr
 ================================================================================
-# setup a Cloudant database
-# execute the following commands
+* setup a Cloudant database
+* execute the following commands
 
-git clone https://github.com/CodenameBlueMix/bluemix-car-rally-charge-coupon.git
-cd bluemix-car-rally-charge-coupon
-make install
+    git clone https://github.com/CodenameBlueMix/bluemix-car-rally-charge-coupon.git
+    cd bluemix-car-rally-charge-coupon
+    make install
 
 installation
 ================================================================================

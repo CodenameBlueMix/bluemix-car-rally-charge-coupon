@@ -25,6 +25,62 @@
         <link rel="stylesheet" href="index.css" />
         <link rel="stylesheet" href="cloudOE_demo_sprite.css" />
 
+        <style>
+            @media screen and (max-width: 640px) {
+                #nav-status {            
+                    float: right;
+                    padding-right: 30px;
+                }
+                #navigation {
+                    display: none;
+                }
+                #title {
+                    display: inherit;
+                }
+                nav {
+                    width: 100%;
+                }                
+                ul {
+                    width: 100%;
+                    float: right;
+                    margin-top: 5px;                    
+                    display: none;
+                    color:#fff;
+                    background:#CCC;
+                    overflow: visible;
+                }
+                
+                ul li {
+                    text-align: right;
+                    color:#000;
+                    border-bottom: 1px solid #333;
+                    width: 100%;
+                    min-height: 21px;
+                    padding:2px;
+                    display: block;        
+                    position: relative;    
+                    background-color: #26343f;
+                }
+
+                ul li:last-child {
+                    border-bottom: none;
+                }   
+
+                header nav ul li {
+                    display: inherit;
+                }
+                ul li a {
+                    margin-right: 20px;                    
+                }                             
+            }
+            
+            @media screen and (min-width: 641px) {
+                #nav-status { 
+                    display: none;           
+                }
+            }       
+        </style>
+
 <!--         <link rel="stylesheet" href="banner.css" />
         <link rel="stylesheet" href="cloudOE.css" />        
  -->

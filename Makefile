@@ -3,8 +3,10 @@ include SETTINGS
 #default target, tried to reuse an existing install of node.js and bower dependencies
 all: clean_cache build deploy
 
+install: configure get build deploy
+
 #execute once before running make
-configure: get build
+configure:
 	sed 's/$$APP_NAME/$(APP_NAME)/g' manifest.yml.template | \
         sed 's/$$HOST_NAME/$(HOST_NAME)/g' | \
         sed 's/$$DATABASE_SERVICE_NAME/$(DATABASE_SERVICE_NAME)/g' | \
@@ -14,7 +16,8 @@ configure: get build
 	cf login
 	cf cups $(DATABASE_SERVICE_NAME) -p "url,database,username,password"
 	cf cups $(OPEN_CHARGE_API_SERVICE_NAME) -p $(OPEN_CHARGE_API_SERVICE_URL)
-	cf push --no-start
+	mkdir -p tmp; cp package.json tmp
+	cf push $(APP_NAME) -n $(HOST_NAME) -p tmp --no-manifest --no-start
 	cf se $(APP_NAME) DATABASE_SERVICE_NAME $(DATABASE_SERVICE_NAME)
 	cf se $(APP_NAME) OPEN_CHARGE_API_SERVICE_NAME $(OPEN_CHARGE_API_SERVICE_NAME)
 	touch configure

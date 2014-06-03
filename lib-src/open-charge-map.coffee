@@ -6,6 +6,16 @@ Q      = require "q"
 concat = require "concat-stream"
 
 utils = require "./utils"
+cfEnv   = require "cf-env"
+
+# optinally override the user defined service name for open charge api with a user defined env variable
+if process.env.OPEN_CHARGE_API_SERVICE_NAME != undefined and process.env.OPEN_CHARGE_API_SERVICE_NAME != ""
+    OPEN_CHARGE_SERVICE = process.env.OPEN_CHARGE_API_SERVICE_NAME
+else
+    # default name of the Open Charge API service
+    OPEN_CHARGE_SERVICE = "open-charge-api-v2"
+
+ocmService = cfEnv.getService OPEN_CHARGE_SERVICE
 
 API_PARMS = [
     "output=json"
@@ -13,7 +23,12 @@ API_PARMS = [
     "dataproviderid=1"
 ]
 
-API_URL = "http://api.openchargemap.io/v2/poi/?#{API_PARMS.join '&'}&"
+if ocmService.credentials.url != undefined and ocmService.credentials.url != ""
+    API_URL = ocmService.credentials.url
+else
+    API_URL = "http://api.openchargemap.io/v2/poi/?#{API_PARMS.join '&'}&"
+
+utils.log "using Open Charge API " + API_URL
 
 #-------------------------------------------------------------------------------
 # return location data from Open Charge Map

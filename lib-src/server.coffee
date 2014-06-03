@@ -2,9 +2,6 @@
 
 fs = require "fs"
 
-# name of the todo service in cloud foundry
-TODODB_SERVICE = "car-rally-db"
-
 # local couchdb server
 TODODB_LOCAL   = "http://127.0.0.1:5984/car-rally"
 
@@ -26,11 +23,16 @@ utils   = require "./utils"
 unless process.env.VCAP_SERVICES
     process.env.VCAP_SERVICES = utils.JL require "./vcap-services-local"
 
-if process.env.DATABASE_SERVICE != undefined and process.env.DATABASE_SERVICE != ""
-    TODODB_SERVICE = process.env.DATABASE_SERVICE
+if process.env.DATABASE_SERVICE_NAME != undefined and process.env.DATABASE_SERVICE_NAME != ""
+    DATABASE_SERVICE = process.env.DATABASE_SERVICE_NAME
+else
+    # default name of the database service
+    DATABASE_SERVICE = "car-rally-db"
 
 cfCore = cfEnv.getCore
     name: utils.PROGRAM
+
+gmapService = cfEnv.getService "gmap"
 
 #-------------------------------------------------------------------------------
 # diagnostic message when server exits for any reason
@@ -48,7 +50,7 @@ exports.start = (options) ->
     # sometimes you need to dump your ENV vars
     # utils.vlog "process.env #{utils.JL process.env}"
 
-    utils.log "using BlueMix database service: #{TODODB_SERVICE}"
+    utils.log "using BlueMix database service: #{DATABASE_SERVICE}"
 
     # get the url to the couch database
     couchURL = getCouchURL()
@@ -131,7 +133,7 @@ class Server
 # the url to the CouchDB instance
 #-------------------------------------------------------------------------------
 getCouchURL = ->
-    url = cfEnv.getServiceURL TODODB_SERVICE,
+    url = cfEnv.getServiceURL DATABASE_SERVICE,
         pathname: "database"
         auth:     ["username", "password"]
 

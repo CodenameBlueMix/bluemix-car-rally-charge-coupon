@@ -7,6 +7,7 @@ nano = require "nano"
 utils = require "./utils"
 
 dataCustomer = require "./data-customer"
+dataEmail = require "./data-customer-email"
 dataLocation = require "./data-location-austin"
 
 #-------------------------------------------------------------------------------
@@ -19,6 +20,7 @@ for i in [1...len]
     DATABASE_DOCS.push
         cid:    "#{i}"
         name:   dataCustomer[i]
+        email:  dataEmail[i]
         city:   dataLocation[i].city
         st:     dataLocation[i].st
         lat:    dataLocation[i].lat
@@ -41,16 +43,17 @@ csv_lists = (head, req) ->
     {}
 
 byID_map = (doc) ->
-    {cid, name, city, st, lat, lon} = doc
+    {cid, name, email, city, st, lat, lon} = doc
 
     return unless cid?
     return unless name?
+    return unless email?
     return unless city?
     return unless st?
     return unless lat?
     return unless lon?
 
-    emit cid, {name, city, st, lat, lon}
+    emit cid, {name, email, city, st, lat, lon}
 
 DESIGN_NAME = "customers"
 DESIGN_DOC  =
@@ -224,15 +227,16 @@ class DB
     _sanitize: (obj) ->
         return null unless obj?
 
-        {name, city, st, lat, lon} = obj
+        {name, email, city, st, lat, lon} = obj
 
         return null unless name?
+        return null unless email?
         return null unless city?
         return null unless st?
         return null unless lat?
         return null unless lon?
 
-        return {name, city, st, lat, lon}
+        return {name, email, city, st, lat, lon}
 
 #---------------------------------------------------------------------------
 # debug wrapper for a promise logging some diagnostics

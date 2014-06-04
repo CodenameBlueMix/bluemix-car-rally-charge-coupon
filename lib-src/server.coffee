@@ -12,6 +12,7 @@ http = require "http"
 Q       = require "q"
 _       = require "underscore"
 express = require "express"
+bodyParser = require "body-parser"
 cfEnv   = require "cf-env"
 
 db      = require "./db"
@@ -108,7 +109,9 @@ class Server
         app.use express.static "www"
 
         # parse JSON bodies in requests
-        app.use express.json()
+        #app.use express.json()
+
+        app.use bodyParser()
 
         # create a transaction object
         app.use (request, response, next) =>
@@ -119,6 +122,7 @@ class Server
         app.get "/api/customers",           (req, res) => req.tx.getCustomers()
         app.get "/api/customers/:cid",      (req, res) => req.tx.getCustomer()
         app.get "/api/locations/:lat,:lon", (req, res) => req.tx.getLocations()
+        app.post "/api/email",              (req, res) => req.tx.sendEmail()
 
         # start the server, resolving the promise when started
         utils.log "server starting: #{cfCore.url}"

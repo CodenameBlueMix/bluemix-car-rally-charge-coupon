@@ -4,6 +4,7 @@ Q = require "q"
 
 utils = require "./utils"
 ocm   = require "./open-charge-map"
+sgs   = require "./sendgrid-email"
 
 #-------------------------------------------------------------------------------
 # returns a new Tx object, ready to have an operation run on it
@@ -59,6 +60,28 @@ class Tx
 
         .fail (err) => @response.send 500, {err: "error reading customer id #{cid}: #{err}"}
         .done()
+
+    #---------------------------------------------------------------------------
+    sendEmail: ->
+      return if @noCustomerDB()
+
+      cid     = @request.body.cid
+      content = @request.body.content
+      utils.log "*** tx.sendEmail #{cid} #{content}"
+      @customerDB.read cid
+
+      .then (item) =>
+        utils.log "*** tx.sendEmail #{item}"
+        if item?
+          sgs.sendEmail item.email, content
+        else
+          @response.send 404
+
+      .then (data) =>
+        @response.send data
+
+      .fail (err) => @response.send 500, {err: "error sending email to customer id #{cid}: #{err}"}
+      .done()
 
     #---------------------------------------------------------------------------
     getLocations: ->

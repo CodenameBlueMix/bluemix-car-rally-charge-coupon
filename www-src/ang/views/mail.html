@@ -13,7 +13,7 @@
 	</table>
 
 	<p></p>
-
+    <div id="cid" style="visibility: hidden">{{customer.cid}}</div>
 	<div id='emailBody'><p>{{customer.name}}, for being such a loyal Metro customer, we'd like to thank you by giving you a free electric charge gift coupon.</p>
 
 	<img id='imgCoupon' src="http://{{pageHost}}/images/electricChargeCoupon_ipad.png" width="100%"/>
@@ -27,13 +27,37 @@
 	selectDashboardItem('email', 'Email');
 
 	function toggleEmail() {
+        var cid = document.querySelectorAll('div#cid')[0].textContent.toString();
 		var src = document.getElementById("emailBody");
 		var dst = document.getElementById("dst");
 		if (dst.classList.contains("car-rally-empty")) {
+
 			dst.textContent = new String(src.innerHTML);
 			dst.classList.remove("car-rally-empty");
 			dst.style.display='inherit';
-		} else {
+
+            var req = new XMLHttpRequest();
+            var url = '/api/email';
+            var data = 'cid=' + cid + '&content=' + new String(document.getElementById("emailBody").innerHTML);
+
+            console.log(url);
+            req.open('POST', url, true);
+            req.onload = function() {
+                console.log('status ' + this.status)
+                if (this.status >= 200 && this.status < 400){
+                    // Success!
+                    data = JSON.parse(this.response);
+                    console.log(JSON.stringify(data, undefined, 2))
+                } else {
+                    console.log('error')
+                }
+            };
+
+            req.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            req.send(data);
+
+
+        } else {
 			dst.style.display='none'
 			dst.textContent = "";
 			dst.classList.add("car-rally-empty");

@@ -11,6 +11,9 @@ AngTangle.controller ($scope, $location, Customers) ->
         if vnew > 0
             $scope.customer = $scope.customers[cindex]
 
+    $scope.getCustomerId = ->
+        $scope.customer.cid
+
     $scope.custPrev = ->
         if cindex <= 0
             cindex = $scope.customers.length-1

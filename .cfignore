@@ -3,3 +3,4 @@ tmp
 lib-src
 www-src
 *.coffee
+configure

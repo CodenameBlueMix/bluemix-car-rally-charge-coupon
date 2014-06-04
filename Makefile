@@ -12,17 +12,20 @@ configure:
         sed 's/$$DATABASE_SERVICE_NAME/$(DATABASE_SERVICE_NAME)/g' | \
         sed 's/$$OPEN_CHARGE_API_SERVICE_NAME/$(OPEN_CHARGE_API_SERVICE_NAME)/g' \
 	> manifest.yml
-
 	cf login
+	cf create-service sendgrid free ${SENDGRID_SERVICE_NAME}
 	cf cups $(DATABASE_SERVICE_NAME) -p "url,database,username,password"
 	cf cups $(OPEN_CHARGE_API_SERVICE_NAME) -p $(OPEN_CHARGE_API_SERVICE_URL)
+	#use an empty app contents to create the initial app instance
 	mkdir -p tmp; cp package.json tmp
 	cf push $(APP_NAME) -n $(HOST_NAME) -p tmp --no-manifest --no-start
+	cf bind-service ${APP_NAME} ${SENDGRID_SERVICE_NAME}
+	cf se $(APP_NAME) SENDGRID_SERVICE_NAME $(SENDGRID_SERVICE_NAME)
 	cf se $(APP_NAME) DATABASE_SERVICE_NAME $(DATABASE_SERVICE_NAME)
 	cf se $(APP_NAME) OPEN_CHARGE_API_SERVICE_NAME $(OPEN_CHARGE_API_SERVICE_NAME)
 	touch configure
 
-#a target to build a new application from scratch, removing and then re-downloading all dependecies prior to rebuilding
+#a target to build a new application from scratch, removing and then re-downloading all dependencies prior to rebuilding
 new: clean get build deploy
 
 deploy:

@@ -3,7 +3,7 @@ include SETTINGS
 #default target, tried to reuse an existing install of node.js and bower dependencies
 all: clean_cache build deploy
 
-install: configure get build deploy
+install: prereq configure get build deploy
 
 #execute once before running make
 configure:
@@ -27,6 +27,11 @@ configure:
 
 #a target to build a new application from scratch, removing and then re-downloading all dependencies prior to rebuilding
 new: clean get build deploy
+
+prereq:
+	which node
+	which jbuild
+	which bower
 
 deploy:
 	cf push

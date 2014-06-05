@@ -9,6 +9,7 @@ install: prereq configure get build deploy
 configure:
 	sed 's/$$APP_NAME/$(APP_NAME)/g' manifest.yml.template | \
         sed 's/$$HOST_NAME/$(HOST_NAME)/g' | \
+        sed 's/$$SENDGRID_SERVICE_NAME/$(SENDGRID_SERVICE_NAME)/g' | \
         sed 's/$$DATABASE_SERVICE_NAME/$(DATABASE_SERVICE_NAME)/g' | \
         sed 's/$$OPEN_CHARGE_API_SERVICE_NAME/$(OPEN_CHARGE_API_SERVICE_NAME)/g' \
 	> manifest.yml

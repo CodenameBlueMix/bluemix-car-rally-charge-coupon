@@ -12,6 +12,10 @@ tl;dr
 
 Enter your Bluemix login credentials and your Cloudant database settings when prompted.
 
+Tweak by modifying the SETTINGS files.
+
+Read on if you want to hack this code.
+
 installation
 ================================================================================
 
